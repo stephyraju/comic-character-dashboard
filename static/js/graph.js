@@ -91,21 +91,23 @@ function show_alignment(ndx) {
 
 function show_numberOfAppearance(ndx) {
      
-     var genderColors = d3.scale.ordinal()
+      var genderColors = d3.scale.ordinal()
         .domain(["female", "male"])
         .range(["pink", "blue"]);
         
       var yearDim = ndx.dimension(function (d) {
       return d.year;
-    });  
+      
+       });  
         
-     var xyearDim = ndx.dimension(function(d){
+      var xyearDim = ndx.dimension(function(d){
         return [d.year, d.appearances, d.sex];
-    });
-    var yearAppearanceGroup = xyearDim.group();
+       });
+       
+       var yearAppearanceGroup = xyearDim.group();
     
-       var minYear = yearDim.bottom(1)[0]["year"];
-       var maxYear = yearDim.top(1)[0]["year"];
+       var minYear = yearDim.bottom(1)[0].year;
+       var maxYear = yearDim.top(1)[0].year;
     
     dc.scatterPlot("#appearance")
         .width(800)
@@ -114,19 +116,20 @@ function show_numberOfAppearance(ndx) {
         .brushOn(false)
         .symbolSize(8)
         .clipPadding(10)
+        .elasticX(true)
         .xAxisLabel("Year")
+        .elasticY(true)
         .yAxisLabel("Apperarance")
         .title(function (d) {
-            return d.key[3] + " appearances " + d.key[3];
+            return d.key[1] + " appearances ";
         })
         
         .colorAccessor(function (d) {
-            return d.key[3];
+            return d.key[2];
         })
         .colors(genderColors)
-        
         .dimension(yearDim)
         .group(yearAppearanceGroup)
         .margins({top: 10, right: 50, bottom: 75, left: 75});
-
+       
 }
