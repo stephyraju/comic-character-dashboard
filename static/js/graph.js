@@ -17,7 +17,8 @@ function makeGraphs(error, charactersData) {
 /*--------------Align Barchart---------*/
 
 function show_alignment(ndx) {
-   
+    
+      //Counting each align group
 
     function alignmentByGender(dimension, align) {
         return dimension.group().reduce(
@@ -42,6 +43,7 @@ function show_alignment(ndx) {
         );
         
     };
+     // stacked barchart to show number of characters who are good / bad / neutral
     
     var alignmentColors = d3.scale.ordinal()
         .range(['#e9ab18', '#ADDFAD', '#5A87A0']);

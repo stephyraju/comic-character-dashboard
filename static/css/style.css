@@ -52,8 +52,8 @@ body {
 .col-sm-12
  {
   margin : 10px;
-  float:left;
 
+  /*background-color: #f9e6ba;*/
   border: 2px black;
   border-radius: 15px;
   -webkit-border-radius: 15px;
