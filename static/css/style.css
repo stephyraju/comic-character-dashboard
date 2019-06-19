@@ -4,7 +4,7 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: 70px;
     overflow-x: hidden;
     background-color: #fefbf5;
 }
@@ -47,4 +47,17 @@ body {
       
     }
 }
+/*--------- Main --------*/
+.col-sm-6,
+.col-sm-12
+ {
+  margin : 10px;
+  float:left;
 
+  border: 2px black;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
