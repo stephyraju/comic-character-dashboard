@@ -5,8 +5,17 @@ queue()
 function makeGraphs(error, charactersData) {
     var ndx = crossfilter(charactersData);
     
+    
+    charactersData.forEach(function(d){
+        
+        d.appearances = parseInt(d.appearances);
+        d.first_appearance=parseInt(d.first-appearance);
+      
+    });
+    
 
     show_alignment(ndx);
+    show_numberOfAppearance(ndx);
     
     dc.renderAll();
 
@@ -76,4 +85,48 @@ function show_alignment(ndx) {
         .xAxisLabel("Gender")
         .legend(dc.legend().x(270).y(170).itemHeight(15).gap(5))
         .margins({top: 10, right: 100, bottom: 30, left: 30});
+}
+
+/*--------------------scatterplot-------*/
+
+function show_numberOfAppearance(ndx) {
+     
+     var genderColors = d3.scale.ordinal()
+        .domain(["female", "male"])
+        .range(["pink", "blue"]);
+        
+      var yearDim = ndx.dimension(function (d) {
+      return d.year;
+    });  
+        
+     var xyearDim = ndx.dimension(function(d){
+        return [d.year, d.appearances, d.sex];
+    });
+    var yearAppearanceGroup = xyearDim.group();
+    
+       var minYear = yearDim.bottom(1)[0]["year"];
+       var maxYear = yearDim.top(1)[0]["year"];
+    
+    dc.scatterPlot("#appearance")
+        .width(800)
+        .height(400)
+        .x(d3.scale.linear().domain([minYear,maxYear]))
+        .brushOn(false)
+        .symbolSize(8)
+        .clipPadding(10)
+        .xAxisLabel("Year")
+        .yAxisLabel("Apperarance")
+        .title(function (d) {
+            return d.key[3] + " appearances " + d.key[3];
+        })
+        
+        .colorAccessor(function (d) {
+            return d.key[3];
+        })
+        .colors(genderColors)
+        
+        .dimension(yearDim)
+        .group(yearAppearanceGroup)
+        .margins({top: 10, right: 50, bottom: 75, left: 75});
+
 }
