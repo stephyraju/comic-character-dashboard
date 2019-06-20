@@ -65,8 +65,8 @@ function show_alignment(ndx) {
     var neutralByGender = alignmentByGender(dim, "neutral characters");
   
     dc.barChart("#bar-alignment")
-        .width(350)
-        .height(250)
+        .width(400)
+        .height(300)
         .dimension(dim)
         .group(goodByGender, "Good")
         .stack(badByGender, "Bad")
@@ -83,8 +83,8 @@ function show_alignment(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .xAxisLabel("Gender")
-        .legend(dc.legend().x(270).y(170).itemHeight(15).gap(5))
-        .margins({top: 10, right: 100, bottom: 30, left: 30});
+        .legend(dc.legend().x(340).y(170).itemHeight(15).gap(5))
+        .margins({top: 10, right: 100, bottom: 60, left: 30});
 }
 
 /*--------------------scatterplot-------*/
