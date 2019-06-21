@@ -35,10 +35,12 @@ body {
     
 }
 
-#reset-all {
+#reset-all a {
     margin: 10 20px 10px;
     float: right;
-    color:#ecb535;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
     
 }
 
@@ -50,14 +52,21 @@ body {
 /*--------- Main --------*/
 
 /*----icons----*/
+.gender-percent{
+    display: flex;
+    text-align: center;
+}
 
 .gender-icon {
     font-size: 4rem;
+    justify-content: space-around;
 }
-.icons {
-    margin-top: 10px;
+
+.icons
+.percent {
+    margin: 10px 0 10px 10px;
     padding: 5px;
-    text-align: center;
+   
 }
 
 .col-sm-6,

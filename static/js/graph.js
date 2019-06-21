@@ -15,6 +15,10 @@ function makeGraphs(error, charactersData) {
     
 
     show_alignment(ndx);
+    gender_selector(ndx);
+    show_gender_percent(ndx, 'male characters', '#male-percent');
+    show_gender_percent(ndx, 'female characters', '#female-percent');
+    show_gender_percent(ndx, 'genderless characters', '#others-percent');
     show_numberOfAppearance(ndx);
     show_eyeColor(ndx);
     show_hairColor(ndx);
@@ -25,6 +29,14 @@ function makeGraphs(error, charactersData) {
 }
 
 /*----------Helper Functions-----------*/
+
+// Reset All Button //
+
+$('#reset-all').click(function() {
+    dc.filterAll();
+    dc.renderAll();
+});
+
 
 //To remove empty values from grouped data//
 
@@ -38,6 +50,59 @@ function remove_blanks(group, value_to_remove) {
         }
     };
 }
+
+/*------------Gender count and Percentage ---------*/
+
+function gender_selector(ndx) {
+    var genderDim = ndx.dimension(dc.pluck('sex'));
+    var genderGroup = remove_blanks(genderDim.group(), "");
+
+    dc.selectMenu('#genderPercent')
+        .dimension(genderDim)
+        .group(genderGroup);
+}
+
+function show_gender_percent(ndx, sex, element) {
+    var genderPercent = ndx.groupAll().reduce(
+        // Sum totals for each gender type
+        function(p, v) {
+            p.total++;
+            if (v.sex === sex) {
+                p.sex_count++;
+            }
+            return p;
+        },
+        function(p, v) {
+            p.total--;
+            if (v.sex === sex) {
+                p.sex_count--;
+            }
+            return p;
+        },
+        function() {
+            return { total: 0, sex_count: 0 };
+        }
+    );
+
+    dc.numberDisplay(element)
+        .formatNumber(d3.format('.2%'))
+        .valueAccessor(function(d) {
+            if (d.sex_count == 0) {
+                return 0;
+            }
+            else {
+                return (d.sex_count / d.total);
+            }
+        })
+        .group(genderPercent);
+}
+
+
+
+
+
+
+
 
 
 /*--------------Align Barchart---------*/
