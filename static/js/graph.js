@@ -18,6 +18,7 @@ function makeGraphs(error, charactersData) {
     show_numberOfAppearance(ndx);
     show_eyeColor(ndx);
     show_hairColor(ndx);
+    show_alive(ndx);
     
     dc.renderAll();
 
@@ -194,3 +195,28 @@ function show_numberOfAppearance(ndx) {
       .legend(dc.legend().x(320).y(10).itemHeight(12).gap(5));
       
   }  
+  /*------------------Alivre Bar chart-----------*/
+  
+   function show_alive(ndx) {
+    var dim = ndx.dimension(dc.pluck("alive"));
+    var group = remove_blanks(dim.group(), "");
+    
+     var aliveColors = d3.scale.ordinal()
+        .range(['#4682B4']);
+   
+   
+    dc.barChart("#bar-alive")
+      .width(200)
+      .height(500)
+      .margins({top: 10,right: 10,bottom: 30,left: 30})
+      .colors(aliveColors)
+      .dimension(dim)
+      .group(group)
+      .transitionDuration(1000)
+      .x(d3.scale.ordinal())
+      .xUnits(dc.units.ordinal)
+      .elasticY(false)
+      .xAxisLabel("Alive")
+      .yAxis()
+      .ticks(10);
+   }
