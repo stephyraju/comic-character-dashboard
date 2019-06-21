@@ -16,11 +16,27 @@ function makeGraphs(error, charactersData) {
 
     show_alignment(ndx);
     show_numberOfAppearance(ndx);
+    show_eyeColor(ndx);
+    
     
     dc.renderAll();
 
 }
 
+/*----------Helper Functions-----------*/
+
+//To remove empty values from grouped data//
+
+function remove_blanks(group, value_to_remove) {
+    
+    return {
+        all: function() {
+            return group.all().filter(function(d) {
+                return d.key !== value_to_remove;
+            });
+        }
+    };
+}
 
 
 /*--------------Align Barchart---------*/
@@ -133,3 +149,26 @@ function show_numberOfAppearance(ndx) {
         .margins({top: 10, right: 50, bottom: 75, left: 75});
        
 }
+/*------------------Eye Color Pie Chart-----------*/
+
+ function show_eyeColor(ndx) {
+     
+     var pieColors = d3.scale.ordinal()
+        .range(['#e9ab18', '#ADDFAD', '#5A87A0','#F2BC79', '#8C6746', '#B1AA4E', '#B2762D', '#DCAB6E']);
+   
+    var dim = ndx.dimension(dc.pluck("eye"));
+    var group = remove_blanks(dim.group(), "");
+    
+    dc.pieChart("#eye-color")
+      .height(300)
+      .width(350)
+      .innerRadius(40)
+      .radius(125)
+      .transitionDuration(1000)
+      .colors(pieColors)
+      .dimension(dim)
+      .group(group)
+      .legend(dc.legend().x(320).y(10).itemHeight(12).gap(5));
+      
+  }  
+  
