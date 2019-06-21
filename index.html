@@ -40,10 +40,12 @@
 
 
     <main>
-        <section id="alignment-scatter">
+         <!-------Barchart Align------>
+         
+        <section id="alignment-scatter" class="container-fluid">
             <div class="row">
                 <div class="col-sm-12 col-md-6 alignment">
-                    <header class="alignment-header">
+                    <header class="chart-header">
                         <h6>Barchart alignment</h6>
                     </header>
                     <div class="chart-content">
@@ -54,9 +56,11 @@
                     </div>
                 </div>
             </div>
-
+            
+              <!-------Scatterploter Appearance------>
+              
             <div class="col-sm-12 col-md-6 scatterplot-appearance">
-                <header class="scatter-header">
+                <header class="chart-header">
                     <h6>Scatterploter Appearance </h6>
                 </header>
                 <div class="chart-content">
@@ -67,6 +71,49 @@
                 </div>
             </div>
         </section>
+         <!---------Pie Charts---------> 
+         
+        <section id="pie-section" class="container-fluid">
+            <div class="row">
+                
+         <!-------Eye Color------>
+                  
+                <div class="col-xs-12 col-sm-6 col-md-4 eyecolor">
+                    <header class="chart-header">
+                        <h6>Eye Color</h6>
+                    </header>
+                    <div id="eye-color">
+                    <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                    </div>
+                </div>
+                
+                 <!-------Identity------>
+                  
+                <div class="col-xs-12 col-sm-6 col-md-4 identitity">
+                    <header class="chart-header">
+                        <h6>Eye Color</h6>
+                    </header>
+                    <div id="eye-color">
+                    <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                    </div>
+                </div>
+                 <!-------Hair Color------>
+                  
+                <div class="col-xs-12 col-sm-6 col-md-4 haircolor">
+                    <header class="chart-header">
+                        <h6>Eye Color</h6>
+                    </header>
+                    <div id="eye-color">
+                    <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                    </div>
+                </div>
+                
+                
+        </section>
+
+
+
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
