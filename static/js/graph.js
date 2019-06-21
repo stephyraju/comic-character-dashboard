@@ -17,7 +17,7 @@ function makeGraphs(error, charactersData) {
     show_alignment(ndx);
     show_numberOfAppearance(ndx);
     show_eyeColor(ndx);
-    
+    show_hairColor(ndx);
     
     dc.renderAll();
 
@@ -71,7 +71,7 @@ function show_alignment(ndx) {
      // stacked barchart to show number of characters who are good / bad / neutral
     
     var alignmentColors = d3.scale.ordinal()
-        .range(['#e9ab18', '#ADDFAD', '#5A87A0']);
+        .range(['#e9ab18', '#4682B4','#ADDFAD']);
    
 
     var dim = ndx.dimension(dc.pluck("sex"));
@@ -154,7 +154,7 @@ function show_numberOfAppearance(ndx) {
  function show_eyeColor(ndx) {
      
      var pieColors = d3.scale.ordinal()
-        .range(['#e9ab18', '#ADDFAD', '#5A87A0','#F2BC79', '#8C6746', '#B1AA4E', '#B2762D', '#DCAB6E']);
+        .range(['#4682B4','#8C6746','black', '#B1AA4E',	'#FF4500','#ADDFAD','#e9ab18', '#F2BC79', '#B2762D', '#DCAB6E']);
    
     var dim = ndx.dimension(dc.pluck("eye"));
     var group = remove_blanks(dim.group(), "");
@@ -162,7 +162,7 @@ function show_numberOfAppearance(ndx) {
     dc.pieChart("#eye-color")
       .height(300)
       .width(350)
-      .innerRadius(40)
+      .innerRadius(50)
       .radius(125)
       .transitionDuration(1000)
       .colors(pieColors)
@@ -172,3 +172,25 @@ function show_numberOfAppearance(ndx) {
       
   }  
   
+  /*------------------Hair Color Pie Chart-----------*/
+
+ function show_hairColor(ndx) {
+     
+     var pieColors = d3.scale.ordinal()
+        .range(['black','#8C6746','#e9ab18', '#FF4500','#ADDFAD', '#5A87A0','#F2BC79', '#8C6746', '#B1AA4E', '#B2762D', '#DCAB6E']);
+   
+    var dim = ndx.dimension(dc.pluck("hair"));
+    var group = remove_blanks(dim.group(), "");
+    
+    dc.pieChart("#hair-color")
+      .height(300)
+      .width(350)
+      .innerRadius(50)
+      .radius(125)
+      .transitionDuration(1000)
+      .colors(pieColors)
+      .dimension(dim)
+      .group(group)
+      .legend(dc.legend().x(320).y(10).itemHeight(12).gap(5));
+      
+  }  
