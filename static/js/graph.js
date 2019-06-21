@@ -207,7 +207,7 @@ function show_numberOfAppearance(ndx) {
    
     dc.barChart("#bar-alive")
       .width(200)
-      .height(500)
+      .height(400)
       .margins({top: 10,right: 10,bottom: 30,left: 30})
       .colors(aliveColors)
       .dimension(dim)
