@@ -48,6 +48,18 @@ body {
     }
 }
 /*--------- Main --------*/
+
+/*----icons----*/
+
+.gender-icon {
+    font-size: 4rem;
+}
+.icons {
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
 .col-sm-6,
 .col-sm-12
  {
