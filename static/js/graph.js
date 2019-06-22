@@ -24,6 +24,7 @@ function makeGraphs(error, charactersData) {
     show_hairColor(ndx);
     show_alive(ndx);
     
+    
     dc.renderAll();
 
 }
@@ -147,7 +148,7 @@ function show_alignment(ndx) {
     var neutralByGender = alignmentByGender(dim, "neutral characters");
   
     dc.barChart("#bar-alignment")
-        .width(400)
+        .width(350)
         .height(300)
         .dimension(dim)
         .group(goodByGender, "Good")
@@ -165,7 +166,7 @@ function show_alignment(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .xAxisLabel("Gender")
-        .legend(dc.legend().x(340).y(170).itemHeight(15).gap(5))
+        .legend(dc.legend().x(290).y(170).itemHeight(15).gap(5))
         .margins({top: 10, right: 100, bottom: 60, left: 30});
 }
 
@@ -260,7 +261,7 @@ function show_numberOfAppearance(ndx) {
       .legend(dc.legend().x(400).y(10).itemHeight(12).gap(5));
       
   }  
-  /*------------------Alivre Bar chart-----------*/
+  /*------------------Alive Bar chart-----------*/
   
    function show_alive(ndx) {
     var dim = ndx.dimension(dc.pluck("alive"));
@@ -285,3 +286,5 @@ function show_numberOfAppearance(ndx) {
       .yAxis()
       .ticks(10);
    }
+   
+   
