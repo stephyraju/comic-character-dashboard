@@ -227,14 +227,14 @@ function show_numberOfAppearance(ndx) {
     
     dc.pieChart("#eye-color")
       .height(300)
-      .width(350)
+      .width(500)
       .innerRadius(50)
       .radius(125)
       .transitionDuration(1000)
       .colors(pieColors)
       .dimension(dim)
       .group(group)
-      .legend(dc.legend().x(320).y(10).itemHeight(12).gap(5));
+      .legend(dc.legend().x(400).y(10).itemHeight(12).gap(5));
       
   }  
   
@@ -250,14 +250,14 @@ function show_numberOfAppearance(ndx) {
     
     dc.pieChart("#hair-color")
       .height(300)
-      .width(350)
+      .width(500)
       .innerRadius(50)
       .radius(125)
       .transitionDuration(1000)
       .colors(pieColors)
       .dimension(dim)
       .group(group)
-      .legend(dc.legend().x(320).y(10).itemHeight(12).gap(5));
+      .legend(dc.legend().x(400).y(10).itemHeight(12).gap(5));
       
   }  
   /*------------------Alivre Bar chart-----------*/

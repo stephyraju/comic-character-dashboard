@@ -10,10 +10,22 @@ body {
 }
 
 .container-fluid {
-    margin: 0;
+    margin: auto;
     padding-left: 0;
     padding-right: 0;
 }
+.content-wrapper {
+    width: 100%;
+    overflow:auto;
+    height: 100%;
+    padding: 15px 10px;
+    border-radius: 10px;
+    background-color:#FAD904;
+    margin: 12.5px 0;
+    text-align: center;
+}
+
+
 /*--------- Header --------*/
 
 .nav-bar {
@@ -40,8 +52,7 @@ body {
     text-decoration: none;
     color: black;
     font-size: 1em;
-    
-    
+   
 }
 
 @media (min-width: 400px) {
