@@ -177,12 +177,15 @@ function show_identity(ndx) {
     var dim = ndx.dimension(dc.pluck("id"));
     var group = remove_blanks(dim.group(), "");
     
+     var pieColors = d3.scale.ordinal()
+      .range(['#e9ab18', '#4682B4','#ADDFAD']);
 
     dc.pieChart("#identity")
       .height(300)
       .width(350)
       .radius(125)
       .transitionDuration(1000)
+      .colors(pieColors)
       .dimension(dim)
       .group(group)
       .legend(dc.legend().gap(7));
