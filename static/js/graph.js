@@ -15,6 +15,7 @@ function makeGraphs(error, charactersData) {
     
 
     show_alignment(ndx);
+    show_identity(ndx);
     gender_selector(ndx);
     show_gender_percent(ndx, 'male characters', '#male-percent');
     show_gender_percent(ndx, 'female characters', '#female-percent');
@@ -169,6 +170,25 @@ function show_alignment(ndx) {
         .legend(dc.legend().x(290).y(170).itemHeight(15).gap(5))
         .margins({top: 10, right: 100, bottom: 60, left: 30});
 }
+
+ /*-----------------Pie Chart Identity -----------------------*/
+
+function show_identity(ndx) {
+    var dim = ndx.dimension(dc.pluck("id"));
+    var group = remove_blanks(dim.group(), "");
+    
+
+    dc.pieChart("#identity")
+      .height(300)
+      .width(350)
+      .radius(125)
+      .transitionDuration(1000)
+      .dimension(dim)
+      .group(group)
+      .legend(dc.legend().gap(7));
+  }  
+
+
 
 /*--------------------scatterplot-------*/
 
