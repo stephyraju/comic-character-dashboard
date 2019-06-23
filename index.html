@@ -68,33 +68,26 @@
 
                 <div class="col-sm-8 col-md-4 sidebar container-fluid">
                     <div class="content-wrapper">
-                        <div class="row gender-percent">
-                            <div class="col-6 icons">
+
+                        <div class="row align-items-center gender-percent">
+                            <div class="col-4 icon-percent">
                                 <div><i class="fas fa-male gender-icon" style="color:#4682B4"></i></div>
+                                <div id="male-percent" class="percent"></div>
                             </div>
-                            <div class="col-6 percent">
-                                <div id="male-percent"></div>
-                            </div>
-                        </div>
-                        <div class="row gender-percent">
-                            <div class="col-6 icons">
+                            <div class="col-4 icon-percent">
                                 <div><i class="fas fa-female gender-icon" style="color:#ff6666"></i></div>
+                                <div id="female-percent" class="percent"></div>
                             </div>
-                            <div class="col-6 percent">
-                                <div id="female-percent"></div>
-                            </div>
-                        </div>
-                        <div class="row gender-percent">
-                            <div class="col-6 icons">
+                            <div class="col-4 icon-percent">
                                 <div><i class="fas fa-genderless gender-icon" style="color:#77b300"></i></div>
-                            </div>
-                            <div class="col-6 percent">
-                                <div id="others-percent"></div>
+                                <div id="others-percent" class="percent"></div>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
-
+                
             </div>
         </section>
         <!-------Scatterploter Appearance------>
@@ -123,18 +116,18 @@
                         <header class="chart-header">
                             <h6>Barchart Alive</h6>
                         </header>
-                         <div id="bar-alive">
+                        <div id="bar-alive">
                             <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
                         </div>
                         <div class="chart-content">
                             <p> dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, </p>
                         </div>
-                       
-                        
+
+
                     </div>
                 </div>
             </div>
-        
+
         </section>
 
 
@@ -170,25 +163,8 @@
                 </div>
             </div>
         </section>
-<!--Row chart---->
-   <section id="align" class="container-fluid">
-            <div class="row">
 
-                <div class="col-sm-12 col-md-8 alignment">
-                    <div class="content-wrapper">
-                        <header class="chart-header">
-                            <h6>Barchart alignment</h6>
-                        </header>
-                        <div class="chart-content">
-                            <p> Lorem ipsum dolor sit amet, c. Ut wisi enim ad minim veniam, </p>
-                        </div>
-                        <div id="row-alignment">
-                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
-                        </div>
-                    </div>
-                </div>
-        </div>
-        </section>
+
     </main>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

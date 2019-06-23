@@ -61,9 +61,37 @@ body {
     }
 }
 /*--------- Main --------*/
+.gender-percent {
+  width: 300px;
+  height: 50px;
+  display :flex;
+  margin: auto;
 
-/*----icons----*/
-
+}
+.icon-percent {
+    margin: 5px;
+   display: flex;
+  justify-content:space-around;
+  background-color: lightyellow;
+}
+.gender-icon {
+    font-size: 4rem;
+    padding: 3px;
+     width: 50px;
+    height:50px;
+    margin: auto;
+   
+  }
+.percent {
+   font-weight: 600;
+   font-size: 1.5rem;
+   padding: 10px 3px;
+  
+}
+/*----icons--
+.sidebar{
+    display: flex;
+}
 .gender-percent {
   width: 130px;
   height: 50px;
@@ -90,7 +118,7 @@ body {
     
 }
 
-
+----*/
 .col-sm-6,
 .col-sm-12
  {
