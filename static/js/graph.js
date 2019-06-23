@@ -181,14 +181,14 @@ function show_identity(ndx) {
       .range(['#e9ab18', '#4682B4','#ADDFAD']);
 
     dc.pieChart("#identity")
-      .height(300)
-      .width(350)
-      .radius(125)
+      .height(250)
+      .width(400)
+      .radius(115)
       .transitionDuration(1000)
       .colors(pieColors)
       .dimension(dim)
       .group(group)
-      .legend(dc.legend().gap(7));
+      .legend(dc.legend().x(310).y(10).itemHeight(10).gap(5));
   }  
 
 
