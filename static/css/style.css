@@ -143,4 +143,27 @@ body {
     display: flex;
     flex-wrap: wrap;
 }  
+/*----table------*/
 
+table {
+  text-align: left;
+  background-color: black;
+  border-collapse: separate;
+  border: 1px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+table th {
+  text-transform: uppercase;
+  font-family: "Cabin Sketch", cursive;
+  border: 0;
+  padding: 5px;
+}
+
+table td {
+  text-transform: capitalize;
+  border: 0;
+  padding: 5px;
+}

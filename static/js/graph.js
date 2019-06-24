@@ -24,7 +24,7 @@ function makeGraphs(error, charactersData) {
     show_eyeColor(ndx);
     show_hairColor(ndx);
     show_alive(ndx);
-    
+    show_listCharacters(ndx);
     
     dc.renderAll();
 
@@ -98,13 +98,6 @@ function show_gender_percent(ndx, sex, element) {
         })
         .group(genderPercent);
 }
-
-
-
-
-
-
-
 
 
 /*--------------Align Barchart---------*/
@@ -193,7 +186,7 @@ function show_identity(ndx) {
 
 
 
-/*--------------------scatterplot-------*/
+/*--------------------scatterplot--------------*/
 
 function show_numberOfAppearance(ndx) {
      
@@ -310,4 +303,23 @@ function show_numberOfAppearance(ndx) {
       .ticks(10);
    }
    
+   /*------------------List of characters-----------*/
    
+ function show_listCharacters(ndx) {  
+     
+ 
+  var dim = ndx.dimension(dc.pluck("name"));
+  console.log(dim.top(Infinity));
+  
+  dc.dataTable("#all-characters")
+      .dimension(dim)
+      .group(function(d) {
+        return "";
+      })
+      .columns(["name", "urlslug", "first appearance"])
+      .size(Infinity)
+      .sortBy(dc.pluck("name"))
+
+      .order(d3.ascending)
+      .transitionDuration(1000);
+ }
