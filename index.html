@@ -25,13 +25,48 @@
 
     <!--JS Codes-->
     <script type="text/javascript" src="static/js/graph.js"></script>
+    <script type="text/javascript" src="static/js/data.js"></script>
 
 </head>
 
 <body>
+    <!-----  Modal------->
+
+    <div class="modal" id="myModal">
+
+        <!-- Modal Header -->
+
+        <div class="modal-header">
+            <a class="close" data-dismiss="modal">×</a>
+            <h3>Comic Character Dashboard</h3>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+
+        <div class="modal-body">
+            <p>This dashboard features interactive charts to display data behind the story<a href="https://fivethirtyeight.com/features/women-in-comic-books/" target="_blank" class="inline-link" title=" Comic Books Are Still Made By Men, For Men And About Men"> Comic Books Are Still Made By Men, For Men And About Men</a>.
+                All charts are interactive and can get the results filtered when you click on the chart except scatterplot.</p>
+            <br>
+            <p></p>
+
+        </div>
+
+        <!-- Modal footer -->
+
+        <div class="modal-footer">
+            <a href="#" class="btn">Close</a>
+            <a href="#" class="btn btn-primary">Save changes</a>
+        </div>
+    </div>
+
+    <!-----End Modal----->
+
+
+
     <!-------Header------>
     <header>
-        <nav class="container-fluid">
+        <nav class="container-fluid" id="nav-header">
             <div class="row">
                 <div class="col-xs-12 nav-bar navbar-fixed-top">
                     <a href="#" class="title">Comic Character Dashboard</a>
@@ -58,7 +93,7 @@
                         <div class="chart-content">
                             <p> Lorem ipsum dolor sit amet, c. Ut wisi enim ad minim veniam, </p>
                         </div>
-                        <div id="bar-alignment">
+                        <div id="bar-alignment" class="bar-chart">
                             <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
                         </div>
                     </div>
@@ -177,12 +212,20 @@
         </section>
 
 
-                   <div class="chart col-sm-12" id="all-characters-div">
-                        <div class="content-wrapper">
-                            <h2>Comic Characters</h2>
-                            <table id="all-characters"> </table>
-                        </div>
-                    </div>
+
+
+
+        <div class="chart col-sm-12" id="all-characters-div">
+            <div class="content-wrapper">
+                <h2>Comic Characters</h2>
+                <table id="all-characters"> </table>
+            </div>
+        </div>
+        <div id="pagination">
+            <span id="start"></span>-<span id="end"></span> of <span id="totalSize"></span>
+            <button id="prev" class="btn" onclick="prev()">Prev</button>
+            <button id="next" class="btn" onclick="next()">Next</button>
+        </div>
 
         <!-------Table--
 
@@ -198,6 +241,19 @@
                 </div>
         </section>
 ---->
+        <!-------Footer------>
+
+        <footer>
+            <div class="page-footer fixed-bottom container-fluid">
+                <div class ="copyright">
+                <h6><i class="far fa-copyright"></i> Created by Stephy 2019</h6>
+                </div>
+                <div class="return-top">
+                    <a href="#nav-header"><i class="fas fa-arrow-circle-up"></i></a>
+                </div>
+            </div>
+        </footer>
+
 
     </main>
 

@@ -25,6 +25,9 @@ function makeGraphs(error, charactersData) {
     show_hairColor(ndx);
     show_alive(ndx);
     show_listCharacters(ndx);
+   
+    updateResult();
+   
     
     dc.renderAll();
 
@@ -32,12 +35,7 @@ function makeGraphs(error, charactersData) {
 
 /*----------Helper Functions-----------*/
 
-// Reset All Button //
 
-$('#reset-all').click(function() {
-    dc.filterAll();
-    dc.renderAll();
-});
 
 
 //To remove empty values from grouped data//
@@ -306,20 +304,56 @@ function show_numberOfAppearance(ndx) {
    /*------------------List of characters-----------*/
    
  function show_listCharacters(ndx) {  
-     
- 
+     var dataTable = dc.dataTable("#all-characters");
+  
   var dim = ndx.dimension(dc.pluck("name"));
   console.log(dim.top(Infinity));
   
-  dc.dataTable("#all-characters")
+     dataTable
+     
       .dimension(dim)
       .group(function(d) {
         return "";
       })
       .columns(["name", "urlslug", "first appearance"])
       .size(Infinity)
-      .sortBy(dc.pluck("name"))
+      .sortBy(dc.pluck("name")) // This line of code is corrected by stackoverflow
 
       .order(d3.ascending)
       .transitionDuration(1000);
- }
+     
+      
+       }
+  /*-----------------Table Pagination-----------*/
+          var resultStart = 0; var resultEnd =21;
+          
+          function displayResult() {
+
+            document.getElementById("start").innerHTML = resultStart;
+            document.getElementById("end").innerHTML = resultStart + resultEnd-1;
+
+            document.getElementById("totalSize").innerHTML = ndx.size();
+
+
+            d3.select('#prev').attr('disabled', resultStart-resultEnd < 0 ? 'true' : null);
+            d3.select('#next').attr('disabled', resultStart+resultEnd >= ndx.size() ? 'true' : null);
+        }
+
+          function updateResult() {
+
+           dataTable.beginSlice(resultStart);
+           dataTable.endSlice(resultStart + resultEnd);
+           displayResult();
+        }
+
+        function prev() {
+          resultStart -= resultEnd;
+          updateResult();
+          dataTable.redraw();
+        }
+
+          function next() {
+            resultStart += resultEnd;
+            updateResult();
+            dataTable.redraw();
+        }
