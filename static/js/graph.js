@@ -5,6 +5,7 @@ queue()
 function makeGraphs(error, charactersData) {
     var ndx = crossfilter(charactersData);
     
+   
     
     charactersData.forEach(function(d){
         
@@ -12,7 +13,7 @@ function makeGraphs(error, charactersData) {
         d.first_appearance=parseInt(d.first-appearance);
       
     });
-    
+    console.log();
 
     show_alignment(ndx);
     show_identity(ndx);
@@ -26,7 +27,7 @@ function makeGraphs(error, charactersData) {
     show_alive(ndx);
     show_listCharacters(ndx);
    
-    updateResult();
+    updateResult(ndx);
    
     
     dc.renderAll();
@@ -35,6 +36,9 @@ function makeGraphs(error, charactersData) {
 
 /*----------Helper Functions-----------*/
 
+$(document).ready(function() {
+    $("#myModal").modal('show');
+});
 
 
 
@@ -130,7 +134,7 @@ function show_alignment(ndx) {
      // stacked barchart to show number of characters who are good / bad / neutral
     
     var alignmentColors = d3.scale.ordinal()
-        .range(['#e9ab18', '#4682B4','#ADDFAD']);
+        .range(['#e9ab18', '#4682B4','#0E9E8D']);   //,'#ADDFAD'
    
 
     var dim = ndx.dimension(dc.pluck("sex"));
@@ -140,8 +144,11 @@ function show_alignment(ndx) {
     var neutralByGender = alignmentByGender(dim, "neutral characters");
   
     dc.barChart("#bar-alignment")
-        .width(350)
+        
         .height(300)
+        .width(350)
+        //.useViewBoxResizing(true) //to make the chart responsive
+         .centerBar(true)
         .dimension(dim)
         .group(goodByGender, "Good")
         .stack(badByGender, "Bad")
@@ -157,9 +164,12 @@ function show_alignment(ndx) {
         .colors(alignmentColors)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
+        .barPadding(0.2)
         .xAxisLabel("Gender")
         .legend(dc.legend().x(290).y(170).itemHeight(15).gap(5))
         .margins({top: 10, right: 100, bottom: 60, left: 30});
+       
+        
 }
 
  /*-----------------Pie Chart Identity -----------------------*/
@@ -292,6 +302,7 @@ function show_numberOfAppearance(ndx) {
       .colors(aliveColors)
       .dimension(dim)
       .group(group)
+      
       .transitionDuration(1000)
       .x(d3.scale.ordinal())
       .xUnits(dc.units.ordinal)
@@ -302,12 +313,13 @@ function show_numberOfAppearance(ndx) {
    }
    
    /*------------------List of characters-----------*/
+    
    
  function show_listCharacters(ndx) {  
-     var dataTable = dc.dataTable("#all-characters");
+   var dataTable = dc.dataTable("#all-characters");
   
-  var dim = ndx.dimension(dc.pluck("name"));
-  console.log(dim.top(Infinity));
+   var dim = ndx.dimension(dc.pluck("name"));
+ // console.log(dim.top(Infinity));
   
      dataTable
      
@@ -325,10 +337,14 @@ function show_numberOfAppearance(ndx) {
       
        }
   /*-----------------Table Pagination-----------*/
+  
           var resultStart = 0; var resultEnd =21;
+          var ndx;
+          var dataTable = dc.dataTable;
           
           function displayResult() {
-
+            
+             
             document.getElementById("start").innerHTML = resultStart;
             document.getElementById("end").innerHTML = resultStart + resultEnd-1;
 
@@ -341,9 +357,9 @@ function show_numberOfAppearance(ndx) {
 
           function updateResult() {
 
-           dataTable.beginSlice(resultStart);
-           dataTable.endSlice(resultStart + resultEnd);
-           displayResult();
+            dataTable.beginSlice(resultStart);
+            dataTable.endSlice(resultStart + resultEnd);
+            displayResult();
         }
 
         function prev() {

@@ -24,8 +24,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
 
     <!--JS Codes-->
-    <script type="text/javascript" src="static/js/graph.js"></script>
-    <script type="text/javascript" src="static/js/script.js"></script>
+    <script src="static/js/graph.js"></script>
+    
+
+
 
 </head>
 
@@ -70,7 +72,7 @@
             <div class="row">
                 <div class="col-xs-12 nav-bar navbar-fixed-top">
                     <a href="#" class="title">Comic Character Dashboard</a>
-                    <div id="reset-all">
+                    <div id="reset-filters">
                         <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>
                     </div>
                 </div>
@@ -80,25 +82,10 @@
 
 
     <main>
-        <!-------Barchart Align------>
+       
 
         <section id="align" class="container-fluid">
             <div class="row">
-
-                <div class="col-sm-12 col-md-7 alignment">
-                    <div class="content-wrapper">
-                        <header class="chart-header">
-                            <h6>Barchart alignment</h6>
-                        </header>
-                        <div class="chart-content">
-                            <p> Lorem ipsum dolor sit amet, c. Ut wisi enim ad minim veniam, </p>
-                        </div>
-                        <div id="bar-alignment" class="bar-chart">
-                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
-                        </div>
-                    </div>
-                </div>
-
                 <!-------Gender Icons------>
 
                 <div class="col-sm-8 col-md-5 sidebar container-fluid">
@@ -119,20 +106,37 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-------pie------>
 
-                <div class="col-sm-8 col-md-5 sidebar container-fluid">
+                    <!-------Piechart Identity------>
+
+
                     <div class="content-wrapper">
                         <header class="chart-header">
-                            <h6>Eye Color</h6>
+                            <h3>Identity</h3>
                         </header>
                         <div id="identity" class="chart">
                             <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
                         </div>
                     </div>
+
                 </div>
+                       <!-------Barchart Align------>
+                       
+                <div class="col-sm-12 col-md-7 alignment">
+                    <div class="content-wrapper">
+                        <header class="chart-header">
+                            <h3>Alignment</h3>
+                        </header>
+                        <div class="chart-content">
+                            <p> </p>
+                        </div>
+                        <div id="bar-alignment" class="bar-chart">
+                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                        </div>
+                    </div>
+                </div>
+
 
 
             </div>
@@ -145,7 +149,7 @@
                 <div class="col-sm-12 col-md-8 scatterplot-appearance">
                     <div class="content-wrapper">
                         <header class="chart-header">
-                            <h6>Scatterploter Appearance </h6>
+                            <h3>Appearance </h3>
                         </header>
                         <div class="chart-content">
                             <p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, </p>
@@ -161,7 +165,7 @@
                 <div class="col-sm-12 col-md-4 alive">
                     <div class="content-wrapper">
                         <header class="chart-header">
-                            <h6>Barchart Alive</h6>
+                            <h3> Alive</h3>
                         </header>
                         <div id="bar-alive">
                             <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
@@ -188,7 +192,7 @@
                 <div class="col-xs-12 col-sm-6 color">
                     <div class="content-wrapper">
                         <header class="chart-header">
-                            <h6>Eye Color</h6>
+                            <h3>Eye Color</h3>
                         </header>
                         <div id="eye-color" class="chart">
                             <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
@@ -201,7 +205,7 @@
                 <div class="col-xs-12 col-sm-6 color">
                     <div class="content-wrapper">
                         <header class="chart-header">
-                            <h6>Hair Color</h6>
+                            <h3>Hair Color</h3>
                         </header>
                         <div id="hair-color" class="chart">
                             <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
@@ -211,7 +215,7 @@
             </div>
         </section>
 
-
+        <!-------Table------->
 
 
 
@@ -241,24 +245,26 @@
                 </div>
         </section>
 ---->
-       
-    </main>
-     <!-------Footer------>
 
-        <footer>
-            <div class="page-footer container-fluid">
-                <div class="row">               
-                <div class ="col-sm-6 copyright">
-                <h5> &copy;Created by Stephy 2019</h5>
+    </main>
+    <!-------Footer------>
+
+    <footer>
+        <div class="page-footer container-fluid">
+            <div class="row">
+                <div class="col-sm-6 copyright">
+                    <h5> &copy;Created by Stephy 2019</h5>
                 </div>
                 <div class="col-sm-6 return-top">
                     <a href="#nav-header"><i class="fas fa-arrow-circle-up"></i></a>
                 </div>
             </div>
-            </div>
-        </footer>
+        </div>
+    </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="static/js/script.js"></script>
 </body>
 
 </html>
