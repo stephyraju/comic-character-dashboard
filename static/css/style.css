@@ -25,7 +25,16 @@ body {
     text-align: center;
 }
 
+/*--------- Modal--------*/
+.modal-backdrop {
+   background-color: transparent;
+}
+@media screen and (max-width: 767px) {
+  #infoModal {
+    max-width: 100vw;
+  }
 
+}
 
 /*--------- Header --------*/
 
