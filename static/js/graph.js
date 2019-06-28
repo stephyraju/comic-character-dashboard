@@ -27,7 +27,7 @@ function makeGraphs(error, charactersData) {
     show_alive(ndx);
     show_listCharacters(ndx);
    
-    updateResult(dataTable);
+    updateResult();
    
     
     dc.renderAll();
@@ -357,7 +357,7 @@ function show_numberOfAppearance(ndx) {
 
           function updateResult() {
 
-            dataTable.beginSlice(resultStart);
+            dataTable.beginslice(resultStart);
             dataTable.endSlice(resultStart + resultEnd);
             displayResult();
            

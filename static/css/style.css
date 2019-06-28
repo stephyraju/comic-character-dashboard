@@ -55,15 +55,60 @@ body {
     
     
 }
+/*
+.reset-all {
+  height: 30px;
+  margin: .6rem .5rem;
+  padding: 2%;
+  background-color: #fff;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
 
-#reset-filters a {
-    margin: 10 20px 10px;
-    float: right;
-    text-decoration: none;
-    color: black;
-    font-size: 1em;
+.reset-all:hover {
+  background-color: #32e458;
+}
+
+.reset-all a {
+  text-decoration: none;
+}
+
+*/
+
+#reset-filters {
+    display :flex;
+    margin: 10 20px 10px; 
    
 }
+
+
+.reset a{
+  
+    float: right;
+    height: 25px;
+    width:70px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1em;
+    background-color: black;
+    color:  #ecb535;
+    border-radius: 3px;
+    
+   
+}
+.info-icon a i{
+     font-size: 1.7em;
+     padding-right: 5px;
+     padding-left: 10px;
+     color: black;
+}
+
+  
+
 
 @media (min-width: 400px) {
     #reset-all {
