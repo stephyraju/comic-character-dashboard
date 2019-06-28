@@ -84,8 +84,7 @@ body {
     margin: 10 20px 10px; 
    
 }
-
-
+/*
 .reset a{
   
     float: right;
@@ -99,7 +98,8 @@ body {
     border-radius: 3px;
     
    
-}
+}*/
+.reset a i ,
 .info-icon a i{
      font-size: 1.7em;
      padding-right: 5px;

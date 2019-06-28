@@ -13,7 +13,7 @@ function makeGraphs(error, charactersData) {
         d.first_appearance=parseInt(d.first-appearance);
       
     });
-    console.log();
+   
 
     show_alignment(ndx);
     show_identity(ndx);
@@ -145,10 +145,10 @@ function show_alignment(ndx) {
   
     dc.barChart("#bar-alignment")
         
-        .height(300)
-        .width(350)
+        .height(350)
+        .width(600)
         //.useViewBoxResizing(true) //to make the chart responsive
-         .centerBar(true)
+        .centerBar(true)
         .dimension(dim)
         .group(goodByGender, "Good")
         .stack(badByGender, "Bad")
@@ -166,8 +166,8 @@ function show_alignment(ndx) {
         .xUnits(dc.units.ordinal)
         .barPadding(0.2)
         .xAxisLabel("Gender")
-        .legend(dc.legend().x(290).y(170).itemHeight(15).gap(5))
-        .margins({top: 10, right: 100, bottom: 60, left: 30});
+        .legend(dc.legend().x(490).y(10).itemHeight(15).gap(10))
+        .margins({top: 10, right: 100, bottom: 60, left: 120});
        
         
 }
@@ -189,7 +189,7 @@ function show_identity(ndx) {
       .colors(pieColors)
       .dimension(dim)
       .group(group)
-      .legend(dc.legend().x(310).y(10).itemHeight(10).gap(5));
+      .legend(dc.legend().x(310).y(10).itemHeight(10).gap(10));
   }  
 
 
@@ -296,13 +296,13 @@ function show_numberOfAppearance(ndx) {
    
    
     dc.barChart("#bar-alive")
-      .width(200)
+      .width(350)
       .height(400)
-      .margins({top: 10,right: 10,bottom: 30,left: 30})
+      .margins({top: 10,right: 10,bottom: 30,left: 110})
       .colors(aliveColors)
       .dimension(dim)
       .group(group)
-      
+      .barPadding(0.05)
       .transitionDuration(1000)
       .x(d3.scale.ordinal())
       .xUnits(dc.units.ordinal)
@@ -311,7 +311,9 @@ function show_numberOfAppearance(ndx) {
       .yAxis()
       .ticks(10);
    }
+    
    
+  
    /*------------------List of characters-----------*/
     
    
