@@ -101,6 +101,28 @@ function show_gender_percent(ndx, sex, element) {
         .group(genderPercent);
 }
 
+ /*-----------------Pie Chart Identity -----------------------*/
+
+function show_identity(ndx) {
+    var dim = ndx.dimension(dc.pluck("id"));
+    var group = remove_blanks(dim.group(), "");
+    
+     var pieColors = d3.scale.ordinal()
+      .range(['#e9ab18', '#4682B4','#ADDFAD']);
+
+    dc.pieChart("#identity")
+      .height(250)
+      .width(400)
+      .radius(115)
+      .transitionDuration(1000)
+      .colors(pieColors)
+      .dimension(dim)
+      .group(group)
+      .legend(dc.legend().x(310).y(10).itemHeight(10).gap(10));
+  }  
+
+
+
 
 /*--------------Align Barchart---------*/
 
@@ -160,7 +182,9 @@ function show_alignment(ndx) {
                 return 0;
             }
             return d.value.percent * 100;
+            
         })
+       
         .colors(alignmentColors)
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
@@ -168,30 +192,12 @@ function show_alignment(ndx) {
         .xAxisLabel("Gender")
         .legend(dc.legend().x(490).y(10).itemHeight(15).gap(10))
         .margins({top: 10, right: 100, bottom: 60, left: 120});
-       
+      // .renderlet(function(chart) {
+     //   chart.selectAll("g.x text").attr('dx', '-30').attr(
+     // 'dy', '-7').attr('transform', "rotate(-60)"); });
+ 
         
 }
-
- /*-----------------Pie Chart Identity -----------------------*/
-
-function show_identity(ndx) {
-    var dim = ndx.dimension(dc.pluck("id"));
-    var group = remove_blanks(dim.group(), "");
-    
-     var pieColors = d3.scale.ordinal()
-      .range(['#e9ab18', '#4682B4','#ADDFAD']);
-
-    dc.pieChart("#identity")
-      .height(250)
-      .width(400)
-      .radius(115)
-      .transitionDuration(1000)
-      .colors(pieColors)
-      .dimension(dim)
-      .group(group)
-      .legend(dc.legend().x(310).y(10).itemHeight(10).gap(10));
-  }  
-
 
 
 /*--------------------scatterplot--------------*/
