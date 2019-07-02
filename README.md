@@ -24,7 +24,7 @@
 
   ### Technologies Used
   
-  * This project uses HTML and CSS programming languages.
+  * This project uses HTML5 and CSS3 programming languages.
   
   * AWSCloud9 - This developer used Cloud9 for their IDE while building the website.
   
@@ -41,3 +41,36 @@ Bootswatch 3.4.1 (Sandstone theme for bootstrap 3) was used to build responsive 
  * Popper.js
 
 The project uses Popper,js reference Javascript needed for the responsive navbar.
+
+* Javascript
+
+  - This project uses Javascript and Javascript Libraries for building the charts.The libraries used are 
+   as follows 
+
+      - D3.js (version 3.5.17)
+      - Dc.js (version 2.1.8)
+      - Crossfilter.js (version 1.3.12)
+ 
+  - jQuery
+
+       The project uses jQuery to simplify traversing the DOM and displaying different parts of the data and the Modal.
+        
+ - D3-queue.js 
+
+    This will load the json data fully before running other files.
+               
+* Font Awesome
+
+    Font Awesome was used for number display icons, info icon and redo icon.     
+    
+* Balsamiq
+
+   Balsamiq was used for creating the wireframes.
+   
+* Git $ GitHub
+
+   Git used for the Version control and GitHub used as hosting service for Git Repositories of this site.
+ 
+         
+           
+
