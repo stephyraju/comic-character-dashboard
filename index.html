@@ -45,12 +45,15 @@
                 <div class="modal-body">
                     <p>This dashboard features interactive charts to display data behind the story<a href="https://fivethirtyeight.com/features/women-in-comic-books/" target="_blank" class="inline-link" title=" Comic Books Are Still Made By Men, For Men And About Men"> Comic Books Are Still Made By Men, For Men And About Men</a>.
                         All charts are interactive and can get the results filtered when you click on the chart except scatterplot.</p>
-                    <p> The gender Icons and the gender percentage are displayed on the top left side.The percentage will change 
-                    accordingly when you click on the charts.</p>
+                    <p> The gender Icons and the gender percentage are displayed on the top left side.The percentage will change accordingly when you click on the charts.</p>
                     <p>The identity chart shows the number of characters who have different identities.</p>
                     <p> The stacked bar chart displays the Alignment of the characters in relation to their gender.</p>
-                    
-                                    </div>
+                    <p> The scatterplot explains the number of appearance of each character in comic book and the year and the Alive barchart
+                    shows the number of alive and disesed characters.</p>
+                    <p>The table has the name and urslug and the year the characters are first appeared in the books.</p>
+                    <p>All the original data is from<a href ="https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset"target="_blank" class="inline-link" title ="Kaggle.com"> Kaggle</a></p>
+
+                </div>
                 <div class="modal-footer">
 
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
@@ -69,8 +72,8 @@
                     <a href="#" class="title">Comic Character Dashboard</a>
                     <div id="reset-filters">
                         <div class="reset">
-                           <!-- <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>-->
-                           <a href="javascript:dc.filterAll(); dc.renderAll();"><i class="fas fa-redo-alt" title = "Reset All"></i></a>
+                            <!-- <a href="javascript:dc.filterAll(); dc.renderAll();">Reset All</a>-->
+                            <a href="javascript:dc.filterAll(); dc.renderAll();"><i class="fas fa-redo-alt" title = "Reset All"></i></a>
                         </div>
                         <div class="info-icon">
                             <a data-toggle="modal" data-target="#myModal"><i class="fas fa-info-circle" title="Information"></i></a>
@@ -110,23 +113,48 @@
 
 
                     <!-------Piechart Identity------>
-
-
                     <div class="content-wrapper">
                         <header class="chart-header">
                             <h3>Identity</h3>
                         </header>
-                        <div class = "chart-content">
-                        <div id="identity" class="chart">
-                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
-                        </div>
-                            <p>Most of the characters have either secret or public identity,and there is a marginal
-                            difference between them.</p>
-                            
+                         <div class="chart-content">
+                            <div id="identity" class="chart">
+                                <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4;">Reset</span></a>
+                            </div>
+                            <p>Most of the characters have either secret or public identity,and there is a marginal difference between them.</p>
                         </div>
                     </div>
-
                 </div>
+
+                <!--
+                    <div class="content-wrapper">
+                        <div>
+                            <a data-toggle="modal" data-target="#subModal"> <i class="fas fa-info-circle sub-modal" title="Information"></i></a>
+                        </div>
+                        <header class="chart-header">
+                            <h3>Identity</h3>
+                        </header>
+
+                        <div id="identity" class="chart">
+                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+
+                        </div>
+                         
+    
+                    <div class="modal fade" id="subModal" role="dialog" aria-labelledby="Identity" aria-hidden="true">
+                        
+                            <div class="modal-dialog modal-sm">
+   
+                            <div class="modal-content">
+                            <h4>Identity</h4>
+                        <p>Most of the characters have either secret or public identity,and there is a marginal difference between them.</p>
+                        </div>
+                        </div>
+                  </div>
+                 
+            </div>
+            </div>
+            --->
                 <!-------Barchart Align------>
 
                 <div class="col-sm-12 col-md-7 alignment">
@@ -135,21 +163,20 @@
                             <h3>Alignment</h3>
                         </header>
                         <div class="chart-content">
-                        
-                        <div id="bar-alignment" class="bar-chart">
-                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+
+                            <div id="bar-alignment" class="bar-chart">
+                                <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                            </div>
+
+                            <p>When comparing the alignment with gender,female characters have the most numer of good alignment.</p>
+                            <p>There is just one genderless charcter and which is in bad alignment either.</p>
+
                         </div>
-                        
-                        <p>When comparing the alignment with gender,female characters have the most numer of 
-                        good alignment.There is just one genderless charcter and which is in bad alignment either.</p>
-                       
-                        
                     </div>
+
+
+
                 </div>
-
-
-
-            </div>
         </section>
         <!-------Scatterploter Appearance------>
 
@@ -162,34 +189,33 @@
                             <h3>Appearance </h3>
                         </header>
                         <div class="chart-content">
-                           
-                       
-                        <div id="appearance">
-                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
-                        </div>
-                        <p>The chart displays the number of apperances of the character in comic book and also the year 
-                        of the first appearance in a comic book.</p>
-                    </div>
 
-                </div>
-                <!-------Barchart Alive------>
 
-                <div class="col-sm-12 col-md-4 alive">
-                    <div class="content-wrapper">
-                        <header class="chart-header">
-                            <h3> Alive</h3>
-                        </header>
-                        <div id="bar-alive">
-                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                            <div id="appearance">
+                                <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                            </div>
+                            <p>The chart displays the number of apperances of the character in comic book and also the year of the first appearance in a comic book.</p>
                         </div>
-                        <div class="chart-content">
-                            <p>A little over 75% of the characters are living as per the current data.</p>
-                        </div>
-
 
                     </div>
+                    <!-------Barchart Alive------>
+
+                    <div class="col-sm-12 col-md-4 alive">
+                        <div class="content-wrapper">
+                            <header class="chart-header">
+                                <h3> Alive</h3>
+                            </header>
+                            <div id="bar-alive">
+                                <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                            </div>
+                            <div class="chart-content">
+                                <p>A little over 75% of the characters are living as per the current data.</p>
+                            </div>
+
+
+                        </div>
+                    </div>
                 </div>
-            </div>
 
         </section>
 
@@ -206,12 +232,11 @@
                         <header class="chart-header">
                             <h3>Eye Color</h3>
                         </header>
-                        <div class= chart-content>
-                        <div id="eye-color" class="chart">
-                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
-                        </div>
-                        <p> Most of the characters have blue or brown eyes.Majority of the brown eyes characters 
-                        either have black or brown hair.</p>
+                        <div class="chart-content">
+                            <div id="eye-color" class="chart">
+                                <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                            </div>
+                            <p> Most of the characters have blue or brown eyes.Majority of the brown eyes characters either have black or brown hair.</p>
                         </div>
                     </div>
                 </div>
@@ -223,13 +248,12 @@
                         <header class="chart-header">
                             <h3>Hair Color</h3>
                         </header>
-                        <div class="char-content">
-                        <div id="hair-color" class="chart">
-                            <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
-                        </div>
-                        <p>With hair color section the most charcters chose black,brown or red hair but there are few more 
-                        colors too.</p>
-                        <p>Over 75% blond hair characters have blue eyes!</p>
+                        <div class="chart-content">
+                            <div id="hair-color" class="chart">
+                                <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();">Reset</a>
+                            </div>
+                            <p>With hair color section the most charcters chose black,brown or red hair but there are few more colors too.</p>
+                            <p>Over 75% blond hair characters have blue eyes!</p>
                         </div>
                     </div>
                 </div>
@@ -285,10 +309,12 @@
 
 
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    
+   
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
- 
+
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
     <script src="static/js/script.js"></script>

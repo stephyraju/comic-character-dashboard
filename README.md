@@ -51,7 +51,7 @@ The project uses Popper,js reference Javascript needed for the responsive navbar
       - Dc.js (version 2.1.8)
       - Crossfilter.js (version 1.3.12)
  
-  - jQuery
+  - jQuery (version 3.4.1)
 
        The project uses jQuery to simplify traversing the DOM and displaying different parts of the data and the Modal.
         

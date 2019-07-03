@@ -36,11 +36,6 @@ function makeGraphs(error, charactersData) {
 
 /*----------Helper Functions-----------*/
 
-$(document).ready(function() {
-    $("#myModal").modal('show');
-});
-
-
 
 //To remove empty values from grouped data//
 
@@ -223,7 +218,7 @@ function show_numberOfAppearance(ndx) {
        var maxYear = yearDim.top(1)[0].year;
     
     dc.scatterPlot("#appearance")
-        .width(800)
+        .width(750)
         .height(400)
         .x(d3.scale.linear().domain([minYear,maxYear]))
         .brushOn(false)
@@ -243,9 +238,39 @@ function show_numberOfAppearance(ndx) {
         .colors(genderColors)
         .dimension(yearDim)
         .group(yearAppearanceGroup)
-        .margins({top: 10, right: 50, bottom: 75, left: 75});
+        .margins({top: 10, right: 50, bottom: 75, left: 55});
        
 }
+  /*------------------Alive Bar chart-----------*/
+  
+   function show_alive(ndx) {
+    var dim = ndx.dimension(dc.pluck("alive"));
+    var group = remove_blanks(dim.group(), "");
+    
+     var aliveColors = d3.scale.ordinal()
+        .range(['#4682B4']);
+   
+   
+    dc.barChart("#bar-alive")
+      .width(350)
+      .height(400)
+      .margins({top: 10,right: 10,bottom: 30,left: 110})
+      .colors(aliveColors)
+      .dimension(dim)
+      .group(group)
+      .barPadding(0.05)
+      .transitionDuration(1000)
+      .x(d3.scale.ordinal())
+      .xUnits(dc.units.ordinal)
+      .elasticY(false)
+      .xAxisLabel("Alive")
+      .yAxis()
+      .ticks(10);
+   }
+    
+   
+
+
 /*------------------Eye Color Pie Chart-----------*/
 
  function show_eyeColor(ndx) {
@@ -291,34 +316,7 @@ function show_numberOfAppearance(ndx) {
       .legend(dc.legend().x(400).y(10).itemHeight(12).gap(5));
       
   }  
-  /*------------------Alive Bar chart-----------*/
-  
-   function show_alive(ndx) {
-    var dim = ndx.dimension(dc.pluck("alive"));
-    var group = remove_blanks(dim.group(), "");
-    
-     var aliveColors = d3.scale.ordinal()
-        .range(['#4682B4']);
-   
-   
-    dc.barChart("#bar-alive")
-      .width(350)
-      .height(400)
-      .margins({top: 10,right: 10,bottom: 30,left: 110})
-      .colors(aliveColors)
-      .dimension(dim)
-      .group(group)
-      .barPadding(0.05)
-      .transitionDuration(1000)
-      .x(d3.scale.ordinal())
-      .xUnits(dc.units.ordinal)
-      .elasticY(false)
-      .xAxisLabel("Alive")
-      .yAxis()
-      .ticks(10);
-   }
-    
-   
+
   
    /*------------------List of characters-----------*/
     
@@ -344,7 +342,8 @@ function show_numberOfAppearance(ndx) {
      
       
        }
-  /*-----------------Table Pagination-----------*/
+       
+       /*-----------------Table Pagination-----------*/
   
           var resultStart = 0; var resultEnd =21;
           var ndx;
@@ -382,3 +381,5 @@ function show_numberOfAppearance(ndx) {
             updateResult();
             dataTable.redraw();
         }
+        
+   
