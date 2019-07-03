@@ -3,7 +3,7 @@
 body {
     height: 100%;
     width: 100%;
-    margin: 0;
+    font-size: 1.7em;
     padding-top: 70px;
     overflow-x: hidden;
     background-color: #f9ebba;
@@ -20,10 +20,11 @@ body {
     overflow: auto;
     height: 100%;
     padding: 15px 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     background-color: #fefbf5;
-    margin: 12.5px 0;
+    margin: 12px 0;
     text-align: center;
+    border: 10px solid rgba(249, 235, 185, 0.89);
 }
 
 /*--------- Modal--------*/
@@ -34,7 +35,7 @@ body {
 
 @media screen and (max-width: 767px) {
     #infoModal {
-        max-width: 100vw;
+        max-width: 100vh;
     }
 
 }
@@ -145,21 +146,6 @@ body {
 }
 
 
-/*.col-sm-6,
-.col-sm-12
-
- {
-  margin : 0;
-
-  /*background-color: #f9e6ba;
-  border: 2px black;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-}*/
-
 /*---
 #bar-alignment .x.axis text {
     text-anchor: end !important;
@@ -242,9 +228,8 @@ table td {
 
 .return-top {
     text-align: right;
-     font-size: 1.7em;
-     position: relative;
-
+    font-size: 1.7em;
+    
 }
 
 .return-top a i {
