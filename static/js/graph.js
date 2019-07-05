@@ -252,9 +252,9 @@ function show_numberOfAppearance(ndx) {
    
    
     dc.barChart("#bar-alive")
-      .width(350)
+      .width(300)
       .height(400)
-      .margins({top: 10,right: 10,bottom: 30,left: 110})
+      .margins({top: 10,right: 20,bottom: 30,left: 110})
       .colors(aliveColors)
       .dimension(dim)
       .group(group)
@@ -328,7 +328,6 @@ function show_numberOfAppearance(ndx) {
  // console.log(dim.top(Infinity));
   
      dataTable
-     
       .dimension(dim)
       .group(function(d) {
         return "";
@@ -345,29 +344,22 @@ function show_numberOfAppearance(ndx) {
        
        /*-----------------Table Pagination-----------*/
   
-          var resultStart = 0; var resultEnd =21;
-          var ndx;
-          var dataTable = dc.dataTable;
+        var resultStart = 0; var resultEnd =21;
+        var ndx;
+        var dataTable = dc.dataTable;
           
-          function displayResult() {
-            
-             
+        function displayResult() {
             document.getElementById("start").innerHTML = resultStart;
             document.getElementById("end").innerHTML = resultStart + resultEnd-1;
-
             document.getElementById("totalSize").innerHTML = ndx.size();
-
-
             d3.select('#prev').attr('disabled', resultStart-resultEnd < 0 ? 'true' : null);
             d3.select('#next').attr('disabled', resultStart+resultEnd >= ndx.size() ? 'true' : null);
         }
-
-          function updateResult() {
-
-            dataTable.beginslice(resultStart);
+        
+        function updateResult() {
+            dataTable.beginSlice(resultStart);
             dataTable.endSlice(resultStart + resultEnd);
             displayResult();
-           
         }
 
         function prev() {
@@ -375,8 +367,8 @@ function show_numberOfAppearance(ndx) {
           updateResult();
           dataTable.redraw();
         }
-
-          function next() {
+        
+        function next() {
             resultStart += resultEnd;
             updateResult();
             dataTable.redraw();
