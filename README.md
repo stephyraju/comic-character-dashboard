@@ -12,7 +12,7 @@
  favorite characters.
  Using D3, Dc, and Crossfilter, all charts (except scatter plot) will filter the required data for the user.
  
- ### User Story
+### User Story
  
  * As a user 
     - I want to get all the comic character data in a single page.
@@ -20,6 +20,14 @@
     - I want to find the specific features of characters and find my own conclusions.
     - I want to understand the intersesting features among the characters like how the relate with eye color,haircolor and align.
     - I want to filter the data and reset it for easy use.
+
+
+### Wireframes
+
+These wireframes were created using [Balsamiq](https://balsamiq.com/) during planning process for this project.
+
+
+
  
 ### Features
 
@@ -131,6 +139,18 @@ The project uses Popper,js reference Javascript needed for the responsive navbar
 
    Git used for the Version control and GitHub used as hosting service for Git Repositories of this site.
  
-         
-           
+### Testing
 
+Testing information can be found in [testing.md]() file
+           
+### Deployment
+
+The site was developed using the [cloud9 IDE](https://aws.amazon.com/cloud9/?origin=c9io) and uses git for version control and pushed to GitHub.
+
+
+  To deploy dashboard to GitHub Pages from its GitHub repository([https://github.com/stephyraju/comic-character-dashboard](https://github.com/stephyraju/comic-character-dashboard)), I followed these steps:
+   * Log into GitHub.
+   * From repositories I selected **Comic Character Dashboard**.
+   * Then I selected **settings** from the menubar.
+   * Scroll down to the page, on the  **Source** click the drop-down menu and select **Master Branch**.
+   * The Comic Character Dashbord is now diployed and can found here :[ https://stephyraju.github.io/comic-character-dashboard/.](https://stephyraju.github.io/comic-character-dashboard/.)
