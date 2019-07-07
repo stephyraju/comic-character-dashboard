@@ -20,7 +20,67 @@
     - I want to find the specific features of characters and find my own conclusions.
     - I want to understand the intersesting features among the characters like how the relate with eye color,haircolor and align.
     - I want to filter the data and reset it for easy use.
+ 
+### Features
+
+#### Existing Features
+
+1. Information Modal
+    
+   *The modal pops up when open the page, which has brief information about the dashboard.The user can close it either 
+using the button at the bottom or the 'x' mark on the top right.
+   *The user can open the information modal by clicking the information icon on the navbar too.
+2. Reset 
+   *  There is one reset (redo icon)on the right side of navbar which can reset all the charts.
+   *  Moreover Reset option is given for some charts too, when chart is clicked, the reset link will appear which allows user to reset the filters from the selected chart and also other charts.
+  
+3. Navbar 
    
+    * The navbar is fixed on the top.
+    * The navbar contains the title of the site, a reset icon that when clicked, resets all the filters back to their default values and also an information icon that opens the modal if clicked on that.
+    
+4. Gender Icon
+   
+    * The gender icons are displayed with the percentage of characters in each gender and the number changes as the user filter the charts.
+    
+5. Pie charts
+    
+    *There is one piechart and two doughnut charts which displays different data.
+     The Piechart shows the identity whereas the donughts shows Eye color and Hair color.
+     The user can filter the data by clicking on each slices.
+
+6. Bar charts
+    
+    *The stacked bar graph explains the the genderbased alignment.Like other chart user can filter the data 
+to make a deeper understanding about characters.
+   
+    *The bar graph displays the live status of characters.The user can filter data here as well. 
+  
+7. Scatter plot
+  
+   * Scatterplot shows the characters year of first appearance and the number of appearance in comic books.
+
+8. Table 
+  
+  * The table has all the comic caharacters name,urslug and the first appearance.
+  * Table has pagination and displays 100 rows in one page and has Next and Prev button which will help to 
+    go forward and backword.
+
+9. Footer
+   
+  * A simple footer with copyright notice on the left and return icon on the right.When you click on the reurn icon 
+    you will reach back to the top of the site.
+  
+
+#### Features Left to Implement
+
+
+
+
+
+
+
+
 
   ### Technologies Used
   
