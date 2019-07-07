@@ -154,3 +154,32 @@ The site was developed using the [cloud9 IDE](https://aws.amazon.com/cloud9/?ori
    * Then I selected **settings** from the menubar.
    * Scroll down to the page, on the  **Source** click the drop-down menu and select **Master Branch**.
    * The Comic Character Dashbord is now diployed and can found here :[ https://stephyraju.github.io/comic-character-dashboard/.](https://stephyraju.github.io/comic-character-dashboard/.)
+   * The page is automatically refreshed and ready for deployment, it can take up to 5 minutes for it to be viewable.
+
+
+### Credit
+##### Content
+
+All the contents in the website is written by the developer.
+
+##### Source
+
+The original data is soursed from [kaggle](https://www.kaggle.com/explore-projects), and here is the link:[https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset](https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset).
+
+##### Code
+
+- Code for the pagination was sourced from [Steemit](https://steemit.com/utopian-io/@faad/tutorial-13-dive-into-dc-js-a-javascript-library-data-table-pagination).
+- I was helped out from stackoverflow for using a 'sortBy' function properly in datatable.
+- I used [tutorialspoint](https://www.tutorialspoint.com/dcjs/index.htm)to learn more about dc charts.
+- 
+
+The code learned from the tutorials were used as help and guidance to be interpreted in a different and unique way.
+
+##### Acknowledgements
+
+A huge thanks to Code Institute Mentor Guido Cecilio for his time and support in explaining, demonstrating and giving constructive feedback for this project.
+
+
+######  Disclaimer
+
+The content of this website are for educational purposes only.
