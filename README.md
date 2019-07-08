@@ -6,7 +6,7 @@
   
   The site uses Javascript libraries D3.js, Dc.js and Crossfilter.js to present the barchart,piechart ,scatterplot and a table which has all the list of characters.
   
-  View Dashboard here:[https://stephyraju.github.io/comic-character-dashboard/](https://stephyraju.github.io/comic-character-dashboard/)
+  View Dashboard here: [https://stephyraju.github.io/comic-character-dashboard/](https://stephyraju.github.io/comic-character-dashboard/)
 
 ### Contents Table
 
@@ -17,8 +17,8 @@
 3. [Wireframes](#Wireframes)
 
 4. [Features](#Features)
- - Existing Features
- - Features Left to Implement
+   * Existing Features
+   * Features Left to Implement
 
 5. [Technologies Used](#Technologies-Used)
 
@@ -27,17 +27,17 @@
 7. [Deployment](#Deployment)
 
 8. [Credits](#Credits)
- * Source
- * Code
- * Acknowledgements
- * Disclaimer
+    * Source
+    * Code
+    * Acknowledgements
+    * Disclaimer
 
 
  ## UX
  
-     This website is for people who are intersested in comic characters, this will help them to find some interesting  information about their 
-     favorite characters.
-     Using D3, Dc, and Crossfilter, all charts (except scatter plot) will filter the required data for the user.
+This website is for people who are intersested in comic characters, this will help them to find some interesting  information about their 
+favorite characters.
+Using D3, Dc, and Crossfilter, all charts (except scatter plot) will filter the required data for the user.
      
 ### User Story
  
@@ -53,11 +53,11 @@
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during planning process for this project.
 
- * [Desktop Wireframes]()
+ * [Desktop Wireframes](https://github.com/stephyraju/comic-character-dashboard/blob/master/wireframe/large.png)
  
- * [Tablet Wireframes]()
+ * [Tablet Wireframes](https://github.com/stephyraju/comic-character-dashboard/blob/master/wireframe/ipad.png)
 
- * [Mobile Wireframes]()
+ * [Mobile Wireframes](https://github.com/stephyraju/comic-character-dashboard/blob/master/wireframe/mobile.png)
 
  
 ### Features
@@ -123,56 +123,56 @@ to make a deeper understanding about characters.
 
   ### Technologies Used
   
-  * This project uses HTML5 and CSS3 programming languages.
+  * This project uses [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) and [CSS3](https://www.w3.org/Style/CSS/) programming languages.
   
-  * AWSCloud9 - This developer used Cloud9 for their IDE while building the website.
+  * [AWSCloud9](https://aws.amazon.com/cloud9/) - This developer used Cloud9 for their IDE while building the website.
   
-  * BootstrapCDN
+  * [BootstrapCDN](https://www.bootstrapcdn.com/)
 
 The project uses Bootstrap4 to simplify the structure of the website and make the website responsive easily.
 
 The project also uses BootstrapCDN to provide icons from FontAwesome.
 
- * Bootswatch
+ * [Bootswatch](https://bootswatch.com/3/)
 
 Bootswatch 3.4.1 (Sandstone theme for bootstrap 3) was used to build responsive grid structure for the site and for CSS styling.
 
- * Popper.js
+ * [Popper.js](https://popper.js.org/)
 
 The project uses Popper,js reference Javascript needed for the responsive navbar.
 
-* Javascript
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
   - This project uses Javascript and Javascript Libraries for building the charts.The libraries used are 
    as follows 
 
-      - D3.js (version 3.5.17)
-      - Dc.js (version 2.1.8)
-      - Crossfilter.js (version 1.3.12)
+      - [D3.js](https://d3js.org/) (version 3.5.17)
+      - [Dc.js](https://dc-js.github.io/dc.js/) (version 2.1.8)
+      - [Crossfilter.js](http://square.github.io/crossfilter/) (version 1.3.12)
  
-  - jQuery (version 3.4.1)
+  - [jQuery](https://jquery.com/) (version 3.4.1)
 
        The project uses jQuery to simplify traversing the DOM and displaying different parts of the data and the Modal.
         
-  - D3-queue.js 
+  - [D3-queue.js](https://github.com/d3/d3-queue) 
 
     This will load the json data fully before running other files.
                
-* Font Awesome
+* [Font Awesome](https://www.bootstrapcdn.com/fontawesome/)
 
     Font Awesome was used for number display icons, info icon and redo icon.     
     
-* Balsamiq
+* [Balsamiq](https://balsamiq.com/)
 
    Balsamiq was used for creating the wireframes.
    
-* Git $ GitHub
+* [Git $ GitHub](https://github.com/)
 
    Git used for the Version control and GitHub used as hosting service for Git Repositories of this site.
  
 ### Testing
 
-Testing information can be found in [testing.md]() file
+Testing information can be found in [testing.md](https://github.com/stephyraju/comic-character-dashboard/blob/master/testing.md) file
            
 ### Deployment
 
@@ -201,8 +201,8 @@ The original data is soursed from [kaggle](https://www.kaggle.com/explore-projec
 
 - Code for the pagination was sourced from [Steemit](https://steemit.com/utopian-io/@faad/tutorial-13-dive-into-dc-js-a-javascript-library-data-table-pagination).
 - I was helped out from stackoverflow for using a 'sortBy' function properly in datatable.
-- I used [tutorialspoint](https://www.tutorialspoint.com/dcjs/index.htm)to learn more about dc charts.
-- 
+- I used [tutorialspoint](https://www.tutorialspoint.com/dcjs/index.htm) to learn more about dc charts.
+ 
 
 The code learned from the tutorials were used as help and guidance to be interpreted in a different and unique way.
 
