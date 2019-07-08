@@ -188,7 +188,7 @@ The site was developed using the [cloud9 IDE](https://aws.amazon.com/cloud9/?ori
    * The page is automatically refreshed and ready for deployment, it can take up to 5 minutes for it to be viewable.
 
 
-### Credit
+### Credits
 ##### Content
 
 All the text contents in the website is written by the developer.
