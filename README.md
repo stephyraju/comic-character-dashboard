@@ -6,12 +6,12 @@
   
   The site uses Javascript libraries D3.js, Dc.js and Crossfilter.js to present the barchart,piechart ,scatterplot and a table which has all the list of characters.
   
- # UX
+ ## UX
  
- This website is for people who are intersested in comic characters, this will help them to find some interesting  information about their 
- favorite characters.
- Using D3, Dc, and Crossfilter, all charts (except scatter plot) will filter the required data for the user.
- 
+     This website is for people who are intersested in comic characters, this will help them to find some interesting  information about their 
+     favorite characters.
+     Using D3, Dc, and Crossfilter, all charts (except scatter plot) will filter the required data for the user.
+     
 ### User Story
  
  * As a user 
@@ -123,7 +123,7 @@ The project uses Popper,js reference Javascript needed for the responsive navbar
 
        The project uses jQuery to simplify traversing the DOM and displaying different parts of the data and the Modal.
         
- - D3-queue.js 
+  - D3-queue.js 
 
     This will load the json data fully before running other files.
                
