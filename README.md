@@ -6,6 +6,33 @@
   
   The site uses Javascript libraries D3.js, Dc.js and Crossfilter.js to present the barchart,piechart ,scatterplot and a table which has all the list of characters.
   
+  View Dashboard here:[https://stephyraju.github.io/comic-character-dashboard/](https://stephyraju.github.io/comic-character-dashboard/)
+
+### Contents Table
+
+1. [UX](#UX)
+
+2. [User Story](#User-Story)
+
+3. [Wireframes](#Wireframes)
+
+4. [Features](#Features)
+ - Existing Features
+ - Features Left to Implement
+
+5. [Technologies Used](#Technologies-Used)
+
+6. [Testing](#Testing)
+
+7. [Deployment](#Deployment)
+
+8. [Credits](#Credits)
+ * Source
+ * Code
+ * Acknowledgements
+ * Disclaimer
+
+
  ## UX
  
      This website is for people who are intersested in comic characters, this will help them to find some interesting  information about their 
@@ -26,7 +53,11 @@
 
 These wireframes were created using [Balsamiq](https://balsamiq.com/) during planning process for this project.
 
+ * [Desktop Wireframes]()
+ 
+ * [Tablet Wireframes]()
 
+ * [Mobile Wireframes]()
 
  
 ### Features
@@ -35,9 +66,9 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during pla
 
 1. Information Modal
     
-   *The modal pops up when open the page, which has brief information about the dashboard.The user can close it either 
+   * The modal pops up when open the page, which has brief information about the dashboard.The user can close it either 
 using the button at the bottom or the 'x' mark on the top right.
-   *The user can open the information modal by clicking the information icon on the navbar too.
+   * The user can open the information modal by clicking the information icon on the navbar too.
 2. Reset 
    *  There is one reset (redo icon)on the right side of navbar which can reset all the charts.
    *  Moreover Reset option is given for some charts too, when chart is clicked, the reset link will appear which allows user to reset the filters from the selected chart and also other charts.
@@ -53,16 +84,16 @@ using the button at the bottom or the 'x' mark on the top right.
     
 5. Pie charts
     
-    *There is one piechart and two doughnut charts which displays different data.
+    * There is one piechart and two doughnut charts which displays different data.
      The Piechart shows the identity whereas the donughts shows Eye color and Hair color.
      The user can filter the data by clicking on each slices.
 
 6. Bar charts
     
-    *The stacked bar graph explains the the genderbased alignment.Like other chart user can filter the data 
+    * The stacked bar graph explains the the genderbased alignment.Like other chart user can filter the data 
 to make a deeper understanding about characters.
    
-    *The bar graph displays the live status of characters.The user can filter data here as well. 
+    * The bar graph displays the live status of characters.The user can filter data here as well. 
   
 7. Scatter plot
   
@@ -70,13 +101,13 @@ to make a deeper understanding about characters.
 
 8. Table 
   
-  * The table has all the comic caharacters name,urslug and the first appearance.
-  * Table has pagination and displays 100 rows in one page and has Next and Prev button which will help to 
+   * The table has all the comic caharacters name,urslug and the first appearance.
+   * Table has pagination and displays 100 rows in one page and has Next and Prev button which will help to 
     go forward and backword.
 
 9. Footer
    
-  * A simple footer with copyright notice on the left and return icon on the right.When you click on the reurn icon 
+   * A simple footer with copyright notice on the left and return icon on the right.When you click on the reurn icon 
     you will reach back to the top of the site.
   
 
@@ -160,7 +191,7 @@ The site was developed using the [cloud9 IDE](https://aws.amazon.com/cloud9/?ori
 ### Credit
 ##### Content
 
-All the contents in the website is written by the developer.
+All the text contents in the website is written by the developer.
 
 ##### Source
 
