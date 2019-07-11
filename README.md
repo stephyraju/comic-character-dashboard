@@ -10,23 +10,23 @@
 
 ### Contents Table
 
-1. [UX](#UX)
+1. **[UX](#UX)**
 
-2. [User Story](#User-Story)
+2. **[User Story](#User-Story)**
 
-3. [Wireframes](#Wireframes)
+3. **[Wireframes](#Wireframes)**
 
-4. [Features](#Features)
+4. **[Features](#Features)**
    * Existing Features
    * Features Left to Implement
 
-5. [Technologies Used](#Technologies-Used)
+5. **[Technologies Used](#Technologies-Used)**
 
-6. [Testing](#Testing)
+6. **[Testing](#Testing)**
 
-7. [Deployment](#Deployment)
+7. **[Deployment](#Deployment)**
 
-8. [Credits](#Credits)
+8. **[Credits](#Credits)**
     * Source
     * Code
     * Acknowledgements

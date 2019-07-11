@@ -104,10 +104,12 @@ function show_identity(ndx) {
    .colors(pieColors)
    .dimension(dim)
    .group(group)
+   .useViewBoxResizing(true)
    .legend(dc.legend().x(310).y(10).itemHeight(10).gap(10));
 }
 
 /*--------------Align Barchart---------*/
+
 function show_alignment(ndx) {
   //Counting each align group
   function alignmentByGender(dimension, align) {
@@ -134,7 +136,7 @@ function show_alignment(ndx) {
    // stacked barchart to show number of characters who are good / bad / neutral
   
   var alignmentColors = d3.scale.ordinal()
-    .range(['#e9ab18', '#4682B4','#0E9E8D']);  //,'#ADDFAD'
+    .range(['#e9ab18', '#4682B4','#0E9E8D']);  
 
   var dim = ndx.dimension(dc.pluck("sex"));
   var goodByGender = alignmentByGender(dim, "good characters"); 
@@ -144,7 +146,7 @@ function show_alignment(ndx) {
   dc.barChart("#bar-alignment")
     .height(350)
     .width(600)
-    // .useViewBoxResizing(true) //to make the chart responsive
+    .useViewBoxResizing(true) //to make the chart responsive
     .centerBar(true)
     .dimension(dim)
     .group(goodByGender, "Good")
@@ -164,7 +166,8 @@ function show_alignment(ndx) {
     .barPadding(0.2)
     .xAxisLabel("Gender")
     .legend(dc.legend().x(490).y(10).itemHeight(15).gap(10))
-    .margins({top: 10, right: 100, bottom: 60, left: 120});
+    .margins({ top: 10, right: 50, bottom: 80, left: 50 });
+   // .margins({top: 10, right: 100, bottom: 60, left: 120});
    // .renderlet(function(chart) {
    //  chart.selectAll("g.x text").attr('dx', '-30').attr(
    // 'dy', '-7').attr('transform', "rotate(-60)"); });
@@ -224,6 +227,7 @@ function show_alive(ndx) {
   dc.barChart("#bar-alive")
     .width(300)
     .height(400)
+    .useViewBoxResizing(true)
     .margins({top: 10,right: 20,bottom: 30,left: 110})
     .colors(aliveColors)
     .dimension(dim)
@@ -255,6 +259,7 @@ function show_eyeColor(ndx) {
    .colors(pieColors)
    .dimension(dim)
    .group(group)
+   .useViewBoxResizing(true)
    .legend(dc.legend().x(400).y(10).itemHeight(12).gap(5));
 }
  
@@ -277,6 +282,7 @@ function show_eyeColor(ndx) {
    .colors(pieColors)
    .dimension(dim)
    .group(group)
+   .useViewBoxResizing(true)
    .legend(dc.legend().x(400).y(10).itemHeight(12).gap(5));
    
  } 
@@ -314,7 +320,6 @@ function show_eyeColor(ndx) {
     .columns(["name", "urlslug", "first appearance"])
     .size(Infinity)
     .sortBy(dc.pluck("name")) // This line of code is corrected by stackoverflow
-
     .order(d3.ascending)
     .transitionDuration(1000);
 
