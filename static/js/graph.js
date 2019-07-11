@@ -99,7 +99,7 @@ function show_identity(ndx) {
   dc.pieChart("#identity")
    .height(250)
    .width(400)
-   .radius(115)
+   .radius(100)
    .transitionDuration(1000)
    .colors(pieColors)
    .dimension(dim)
@@ -166,8 +166,8 @@ function show_alignment(ndx) {
     .barPadding(0.2)
     .xAxisLabel("Gender")
     .legend(dc.legend().x(490).y(10).itemHeight(15).gap(10))
-    .margins({ top: 10, right: 50, bottom: 80, left: 50 });
-   // .margins({top: 10, right: 100, bottom: 60, left: 120});
+   //.margins({ top: 10, right: 50, bottom: 80, left: 50 });
+    .margins({top: 10, right: 100, bottom: 60, left: 120});
    // .renderlet(function(chart) {
    //  chart.selectAll("g.x text").attr('dx', '-30').attr(
    // 'dy', '-7').attr('transform', "rotate(-60)"); });

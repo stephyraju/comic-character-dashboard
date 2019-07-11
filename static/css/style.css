@@ -115,16 +115,10 @@ body {
     margin: 0 0 10px 0;
 }
 
-.color {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .chart-content {
     font-size: .8em;
     padding: 10px 5% 0px 6%;
-    display: inline-block;
-   
+    
 }
 
 /*---------Table & Pagination--------*/
