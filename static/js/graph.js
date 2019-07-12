@@ -195,7 +195,7 @@ function show_numberOfAppearance(ndx) {
 
   dc.scatterPlot("#appearance")
     .width(750)
-    .height(400)
+    .height(500)
     .x(d3.scale.linear().domain([minYear,maxYear]))
     .brushOn(false)
     .symbolSize(8)
@@ -213,7 +213,7 @@ function show_numberOfAppearance(ndx) {
     .colors(genderColors)
     .dimension(yearDim)
     .group(yearAppearanceGroup)
-    .margins({top: 10, right: 50, bottom: 75, left: 55});
+    .margins({top: 10, right: 50, bottom: 60, left: 55});
 }
  /*------------------Alive Bar chart-----------*/
  
@@ -253,7 +253,7 @@ function show_eyeColor(ndx) {
   
   dc.pieChart("#eye-color")
    .height(300)
-   .width(500)
+   .width(550)
    .innerRadius(50)
    .radius(125)
    .transitionDuration(1000)
@@ -261,7 +261,7 @@ function show_eyeColor(ndx) {
    .dimension(dim)
    .group(group)
    .useViewBoxResizing(true)
-   .legend(dc.legend().x(400).y(10).itemHeight(12).gap(5));
+   .legend(dc.legend().x(430).y(10).itemHeight(12).gap(5));
 }
  
  /*------------------Hair Color Pie Chart-----------*/
@@ -276,7 +276,7 @@ function show_eyeColor(ndx) {
   
   dc.pieChart("#hair-color")
    .height(300)
-   .width(500)
+   .width(550)
    .innerRadius(50)
    .radius(125)
    .transitionDuration(1000)
@@ -284,7 +284,7 @@ function show_eyeColor(ndx) {
    .dimension(dim)
    .group(group)
    .useViewBoxResizing(true)
-   .legend(dc.legend().x(400).y(10).itemHeight(12).gap(5));
+   .legend(dc.legend().x(430).y(10).itemHeight(12).gap(5));
    
  } 
 
