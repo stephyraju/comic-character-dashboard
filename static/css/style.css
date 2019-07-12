@@ -102,13 +102,16 @@ body {
 }
 
 
-/*---
+
 #bar-alignment .x.axis text {
     text-anchor: end !important;
-    transform: rotate(-45deg);
+    transform: rotate(-35deg);
 }
-----*/
+#bar-alive .x.axis text {
+     text-anchor: end !important;
+    transform: rotate(-35deg);
 
+}
 .graph {
     width: 100%;
     height: 100%;

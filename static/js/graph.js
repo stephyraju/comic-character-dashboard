@@ -154,11 +154,11 @@ function show_alignment(ndx) {
     .stack(neutralByGender, "Neutral")
     .valueAccessor(function (d) {
       if(d.value.total > 0) {
-        return (d.value.match / d.value.total) * 100
+        return Math.round((d.value.match / d.value.total) * 100);
       } else {
         return 0;
       }
-      return d.value.percent * 100;
+      return Math.round(d.value.percent * 100)
     })
     .colors(alignmentColors)
     .x(d3.scale.ordinal())
@@ -167,10 +167,10 @@ function show_alignment(ndx) {
     .xAxisLabel("Gender")
     .legend(dc.legend().x(490).y(10).itemHeight(15).gap(10))
    //.margins({ top: 10, right: 50, bottom: 80, left: 50 });
-    .margins({top: 10, right: 100, bottom: 60, left: 120});
-   // .renderlet(function(chart) {
-   //  chart.selectAll("g.x text").attr('dx', '-30').attr(
-   // 'dy', '-7').attr('transform', "rotate(-60)"); });
+    .margins({top: 10, right: 100, bottom: 100, left: 120});
+   //.renderlet(function(chart) {
+  //  chart.selectAll("g.x text").attr('dx', '-30').attr(
+  // 'dy', '-7').attr('transform', "rotate(-60)"); });
 }
 
 
@@ -228,7 +228,7 @@ function show_alive(ndx) {
     .width(300)
     .height(400)
     .useViewBoxResizing(true)
-    .margins({top: 10,right: 20,bottom: 30,left: 110})
+    .margins({top: 10,right: 20,bottom: 70,left: 110})
     .colors(aliveColors)
     .dimension(dim)
     .group(group)
@@ -243,6 +243,7 @@ function show_alive(ndx) {
 }
 
 /*------------------Eye Color Pie Chart-----------*/
+
 function show_eyeColor(ndx) {
   var pieColors = d3.scale.ordinal()
     .range(['#4682B4','#8C6746','black', '#B1AA4E',	'#FF4500','#ADDFAD','#e9ab18', '#F2BC79', '#B2762D', '#DCAB6E']);
