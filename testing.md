@@ -18,6 +18,7 @@
 
 
 ### Manual Testing
+
 The dashboard was tested throughout development on all the major browsers using the developer tools and also testing on individual devices. 
 After adding each chart and new functionality testing was performed.
 
@@ -32,6 +33,8 @@ Explore Data from FiveThirtyEight](https://www.kaggle.com/fivethirtyeight/fiveth
     
 The original data is in .csv format and the developer changed the data in .json format using a [Convert CSV to JSON](http://www.convertcsv.com/csv-to-json.htm) application,
 for more convenience.
+
+To make short labels on thge chart, the developer renamed few columns (e.g.'female characters' renamed to 'female')
     
 Some features of the characters were blank in the original data as it was unknown.The developer chose to filter out the balnked data
 using functon 'remove_blanks(group, value_to_remove)'.This function was working for the charts.

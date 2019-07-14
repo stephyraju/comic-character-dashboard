@@ -87,7 +87,7 @@ function show_gender_percent(ndx, sex, element) {
     .group(genderPercent);
 }
 
- /*-----------------Pie Chart Identity -----------------------*/
+ /*-----------------Pie Chart Identity ---------------*/
 
 function show_identity(ndx) {
   var dim = ndx.dimension(dc.pluck("id"));
@@ -105,7 +105,7 @@ function show_identity(ndx) {
    .dimension(dim)
    .group(group)
    .useViewBoxResizing(true)
-   .legend(dc.legend().x(310).y(10).itemHeight(10).gap(10));
+   .legend(dc.legend().x(300).y(10).itemHeight(10).gap(10));
 }
 
 /*--------------Align Barchart---------*/
@@ -194,7 +194,7 @@ function show_numberOfAppearance(ndx) {
 
   dc.scatterPlot("#appearance")
     .width(750)
-    .height(400)
+    .height(450)
     .x(d3.scale.linear().domain([minYear,maxYear]))
     .brushOn(false)
     .symbolSize(8)
@@ -212,7 +212,7 @@ function show_numberOfAppearance(ndx) {
     .colors(genderColors)
     .dimension(yearDim)
     .group(yearAppearanceGroup)
-    .margins({top: 10, right: 50, bottom: 60, left: 55});
+    .margins({top: 10, right: 50, bottom: 80, left: 55});
 }
  /*------------------Alive Bar chart-----------*/
  
@@ -225,7 +225,7 @@ function show_alive(ndx) {
 
   dc.barChart("#bar-alive")
     .width(300)
-    .height(400)
+    .height(350)
     .useViewBoxResizing(true)
     .margins({top: 10,right: 20,bottom: 50,left: 110})
     .colors(aliveColors)

@@ -3,11 +3,13 @@
   **Milestone Project 2: Interactive Frontend Development**
  
  
-  The single page datadashbord presents the original data from 'FiveThirtyEight Comic Characters Dataset' in a way that users can easily understand and analyse the content.
+  The single page datadashbord illustrates the original data from 'FiveThirtyEight Comic Characters Dataset' in a way that users can easily understand and analyse the content.
   
-  The site uses Javascript libraries D3.js, Dc.js and Crossfilter.js to present the barchart,piechart ,scatterplot and a table which has all the list of characters.
+  The page uses Javascript libraries D3.js, Dc.js and crossfilter.js in order to present interconnected and dynamic graphs. 
   
-  View Dashboard here: [https://stephyraju.github.io/comic-character-dashboard/](https://stephyraju.github.io/comic-character-dashboard/)
+  The site contains barcharts, piecharts ,scatterplot and a table which has all the list of characters.
+  
+  The current deployed version can be accessed at: [https://stephyraju.github.io/comic-character-dashboard/](https://stephyraju.github.io/comic-character-dashboard/)
 
 ### Contents Table
 
@@ -38,7 +40,14 @@
  
 This website is for people who are intersested in comic characters, this will help them to find some interesting  information about their 
 favorite characters.
+
 Using D3, Dc, and Crossfilter, all charts (except scatter plot) will filter the required data for the user.
+
+The dashboard offers short cuts to reset all data with icons. The user will then be led to the relevant section via smooth scrolling.
+
+For ease of navigation, the top section and also each graph (except scatterplot) has reset icon or reset button, as well as a 'back to top' arrow at the bottom of the page.
+
+
      
 ### User Story
  
@@ -116,8 +125,7 @@ to make a deeper understanding about characters.
 
 * Additional page with character information
 
-  I would like to add an additional page with information on the characters in future.
-
+  I would like to add an additional page with detailed information on the characters in future.
 
 
   ### Technologies Used
