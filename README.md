@@ -1,7 +1,8 @@
   # Comic Character Dashboard
   
-  Data Visualisation Project for the second Milestone project of Code Institute's Diploma in Full-Stack Development.
-  
+  **Milestone Project 2: Interactive Frontend Development**
+ 
+ 
   The single page datadashbord presents the original data from 'FiveThirtyEight Comic Characters Dataset' in a way that users can easily understand and analyse the content.
   
   The site uses Javascript libraries D3.js, Dc.js and Crossfilter.js to present the barchart,piechart ,scatterplot and a table which has all the list of characters.
@@ -113,11 +114,9 @@ to make a deeper understanding about characters.
 
 #### Features Left to Implement
 
+* Additional page with character information
 
-
-
-
-
+  I would like to add an additional page with information on the characters in future.
 
 
 
@@ -196,6 +195,8 @@ All the text contents in the website is written by the developer.
 ##### Source
 
 The original data is soursed from [kaggle](https://www.kaggle.com/explore-projects), and here is the link:[https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset](https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset).
+
+To make the data easier to work with, the .csv file from kaggle.com was converted to a json file.
 
 ##### Code
 

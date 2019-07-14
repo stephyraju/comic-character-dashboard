@@ -195,7 +195,7 @@ function show_numberOfAppearance(ndx) {
 
   dc.scatterPlot("#appearance")
     .width(750)
-    .height(500)
+    .height(400)
     .x(d3.scale.linear().domain([minYear,maxYear]))
     .brushOn(false)
     .symbolSize(8)

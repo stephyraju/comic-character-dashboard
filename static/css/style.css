@@ -3,10 +3,10 @@
 body {
     height: 100%;
     width: 100%;
-    font-size: 1.7em;
+    font-size: 1.8em;
     padding-top: 70px;
-    overflow-x: hidden;
     background-color: #f9ebba;
+    
 }
 
 .container-fluid {
@@ -20,7 +20,7 @@ body {
     width: 100%;
     overflow: hidden;
     height: 100%;
-    padding: 15px 10px;
+    padding: 15px;
     border-radius: 15px;
     background-color: #fefbf5;
     margin: 12px 0;
@@ -28,6 +28,11 @@ body {
     border: 10px solid rgba(249, 235, 185, 0.89);
 }
 
+h5 {
+    font-size: .6em;
+    font-weight: bold;
+    padding: 5px 0  0 3px;
+}
 /*--------- Modal--------*/
 
 .modal-backdrop {
@@ -155,17 +160,12 @@ th {
 
 /*--------- Footer --------*/
 
-.page-footer {
-    width: 100%;
-    height: 45px;
+.footer-content {
+    min-height: 45px;
     background-color: #ecc535;
-    padding: 0;
     margin-top: 10px;
 }
-.page-footer h5{
-    font-size: 1em;
-    font-weight: bold;
-}
+
 .return-top {
     text-align: right;
     font-size: 1.7em;
@@ -177,6 +177,22 @@ th {
 }
 
 /*--------- Media quieries --------*/
+
+@media screen and (min-width: 1200px) {
+ 
+  th,
+  td {
+    font-size: 20px;
+    padding: 5px;
+  }
+  
+}
+@media (min-width: 768px){
+     h5 {
+    font-size: 1em;
+    font-weight: bold;
+}
+}
 @media (max-width: 575.98px){
     
      .modal{
