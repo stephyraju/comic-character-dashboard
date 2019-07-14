@@ -2,10 +2,11 @@
 
 body {
     height: 100%;
-    width: 100%;
     font-size: 1.8em;
     padding-top: 70px;
     background-color: #f9ebba;
+    width: auto!important; 
+    overflow-x: hidden!important
     
 }
 
