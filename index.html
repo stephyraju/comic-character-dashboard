@@ -13,7 +13,7 @@
 
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
+
     <!-- My CSS-->
     <link rel="stylesheet" href="static/css/style.css" type="text/css" />
 
@@ -31,7 +31,7 @@
 
 <body>
 
-    <!-----  Modal------->
+    <!--Modal-->
 
     <div class="modal" id="myModal">
         <div class="modal-dialog">
@@ -60,7 +60,7 @@
         </div>
     </div>
 
-    <!-------Header------>
+    <!--Header-->
 
     <header>
         <nav class="container-fluid" id="nav-header">
@@ -84,7 +84,8 @@
     <main>
         <section id="align" class="container-fluid">
             <div class="row">
-                <!------Gender Icons------>
+
+                <!--Gender Icons-->
 
                 <div class="col-xs-12 col-md-5 sidebar container-fluid">
                     <div class="content-wrapper">
@@ -105,7 +106,7 @@
                         </div>
                     </div>
 
-                    <!-------Piechart Identity------>
+                    <!--Piechart Identity-->
 
                     <div class="content-wrapper">
                         <header class="chart-header">
@@ -120,7 +121,7 @@
                     </div>
                 </div>
 
-                <!-------Barchart Align------>
+                <!--Barchart Align-->
 
                 <div class="col-xs-12 col-md-7 alignment">
                     <div class="content-wrapper">
@@ -130,7 +131,7 @@
                         <div class="chart-content">
 
                             <div id="bar-alignment" class="graph">
-                               <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
+                                <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
                             </div>
 
                             <p>When comparing the alignment with gender,female characters have the most numer of good alignment.</p>
@@ -143,7 +144,8 @@
 
             </div>
         </section>
-        <!-------Scatterplot-Appearance------>
+
+        <!--Scatterplot-Appearance-->
 
         <section id="apperance-alive" class="container-fluid">
             <div class="row">
@@ -155,12 +157,12 @@
                         </header>
                         <div class="chart-content">
                             <div id="appearance"></div>
-                            <p>The chart displays the number of apperances of the character in comic book and 
-                            also the year of the first appearance in a comic book.</p>
+                            <p>The chart displays the number of apperances of the character in comic book and also the year of the first appearance in a comic book.</p>
                         </div>
                     </div>
                 </div>
-                <!-------Barchart Alive------>
+
+                <!--Barchart Alive-->
 
                 <div class="col-xs-12 col-md-4 alive">
                     <div class="content-wrapper">
@@ -181,12 +183,12 @@
         </section>
 
 
-        <!---------Pie Charts--------->
+        <!--Pie Charts-->
 
         <section id="pie-section" class="container-fluid">
             <div class="row">
 
-                <!-------Eye Color------>
+                <!--Eye Color-->
 
                 <div class="col-xs-12 col-md-6">
                     <div class="content-wrapper">
@@ -197,13 +199,12 @@
                             <div id="eye-color" class="graph">
                                 <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
                             </div>
-                            <p> Most of the characters have blue or brown eyes.
-                                Majority of the brown eyes characters either have black or brown hair.</p>
+                            <p> Most of the characters have blue or brown eyes. Majority of the brown eyes characters either have black or brown hair.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-------Hair Color------>
+                <!--Hair Color-->
 
                 <div class="col-xs-12 col-md-6 pie-height">
                     <div class="content-wrapper">
@@ -212,33 +213,33 @@
                         </header>
                         <div class="chart-content">
                             <div id="hair-color" class="graph">
-                               <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
+                                <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
                             </div>
-                            <p>With hair color section the most charcters chose black,brown or red hair but there are few more colors too.
-                            Over 75% blond hair characters have blue eyes!</p>
+                            <p>With hair color section the most charcters chose black,brown or red hair but there are few more colors too. Over 75% blond hair characters have blue eyes!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-------Table------->
-        
-     <section id="character-list" class="container-fluid">
-        <div class="col-xs-12" id="all-characters-div">
-            <div class="content-wrapper">
-                <h2>Comic Characters</h2>
-                <table id="all-characters"> </table>
+        <!--Table-->
+
+        <section id="character-list" class="container-fluid">
+            <div class="col-xs-12" id="all-characters-div">
+                <div class="content-wrapper">
+                    <h2>Comic Characters</h2>
+                    <table id="all-characters"> </table>
+                </div>
             </div>
-        </div>
-        <div id="pagination">
-            <span id="start"></span>-<span id="end"></span> of <span id="totalSize"></span>
-            <button id="prev" class="btn btn-primary">Prev</button>
-            <button id="next" class="btn btn-primary">Next</button>
-        </div>
-    </section>
+            <div id="pagination">
+                <span id="start"></span>-<span id="end"></span> of <span id="totalSize"></span>
+                <button id="prev" class="btn btn-primary">Prev</button>
+                <button id="next" class="btn btn-primary">Next</button>
+            </div>
+        </section>
     </main>
-    <!-------Footer------>
+
+       <!--Footer-->
 
     <footer>
         <div class="container-fluid">
@@ -253,7 +254,7 @@
         </div>
     </footer>
 
- 
+
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

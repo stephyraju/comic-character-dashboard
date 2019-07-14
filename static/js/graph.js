@@ -4,7 +4,7 @@ queue()
   
 function makeGraphs(error, charactersData) {
   var ndx = crossfilter(charactersData);
-
+  
   charactersData.forEach(function(d) {
     d.appearances = parseInt(d.appearances);
     d.first_appearance=parseInt(d.first-appearance);
@@ -14,9 +14,9 @@ function makeGraphs(error, charactersData) {
   show_alignment(ndx);
   show_identity(ndx);
   gender_selector(ndx);
-  show_gender_percent(ndx, 'male characters', '#male-percent');
-  show_gender_percent(ndx, 'female characters', '#female-percent');
-  show_gender_percent(ndx, 'genderless characters', '#others-percent');
+  show_gender_percent(ndx, 'male', '#male-percent');
+  show_gender_percent(ndx, 'female', '#female-percent');
+  show_gender_percent(ndx, 'genderless', '#others-percent');
   show_numberOfAppearance(ndx);
   show_eyeColor(ndx);
   show_hairColor(ndx);
@@ -45,7 +45,7 @@ function remove_blanks(group, value_to_remove) {
 
 function gender_selector(ndx) {
   var genderDim = ndx.dimension(dc.pluck('sex'));
-  var genderGroup = remove_blanks(genderDim.group(), "");
+  var genderGroup = genderDim.group();
 
   dc.selectMenu('#genderPercent')
     .dimension(genderDim)
@@ -147,7 +147,6 @@ function show_alignment(ndx) {
     .height(350)
     .width(600)
     .useViewBoxResizing(true) //to make the chart responsive
-    .centerBar(true)
     .dimension(dim)
     .group(goodByGender, "Good")
     .stack(badByGender, "Bad")
@@ -166,8 +165,8 @@ function show_alignment(ndx) {
     .barPadding(0.2)
     .xAxisLabel("Gender")
     .legend(dc.legend().x(490).y(10).itemHeight(15).gap(10))
-   //.margins({ top: 10, right: 50, bottom: 80, left: 50 });
     .margins({top: 10, right: 100, bottom: 100, left: 120});
+    
    //.renderlet(function(chart) {
   //  chart.selectAll("g.x text").attr('dx', '-30').attr(
   // 'dy', '-7').attr('transform', "rotate(-60)"); });
@@ -186,7 +185,7 @@ function show_numberOfAppearance(ndx) {
   }); 
     
   var xyearDim = ndx.dimension(function(d){
-    return [d.year, d.appearances, d.sex];
+    return [d.year, d.appearances, d.sex, d.name];
   });
   
   var yearAppearanceGroup = xyearDim.group();
@@ -205,7 +204,7 @@ function show_numberOfAppearance(ndx) {
     .elasticY(true)
     .yAxisLabel("Apperarance")
     .title(function (d) {
-      return d.key[1] + " appearances ";
+      return d.key[3] + d.key[1] + " appearances ";
     })
     .colorAccessor(function (d) {
       return d.key[2];
@@ -228,7 +227,7 @@ function show_alive(ndx) {
     .width(300)
     .height(400)
     .useViewBoxResizing(true)
-    .margins({top: 10,right: 20,bottom: 70,left: 110})
+    .margins({top: 10,right: 20,bottom: 50,left: 110})
     .colors(aliveColors)
     .dimension(dim)
     .group(group)
