@@ -128,7 +128,7 @@ to make a deeper understanding about characters.
   I would like to add an additional page with detailed information on the characters in future.
 
 
-  ### Technologies Used
+### Technologies Used
   
   * This project uses [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) and [CSS3](https://www.w3.org/Style/CSS/) programming languages.
   

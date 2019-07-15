@@ -30,6 +30,7 @@ function makeGraphs(error, charactersData) {
 
 
 //To remove empty values from grouped data//
+//remove_blanks function is taken from Code Institute student Dave Laffan-superhero-dashboard//
 
 function remove_blanks(group, value_to_remove) {
   return {
