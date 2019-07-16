@@ -1,20 +1,21 @@
 /*------ General Styling ------------*/
 
+html,body{
+     width: auto!important; 
+    overflow-x: hidden!important
+    
+}
 body {
     height: 100%;
     font-size: 1.8em;
     padding-top: 70px;
     background-color: #f9ebba;
-    width: auto!important; 
-    overflow-x: hidden!important
-    
 }
 
 .container-fluid {
     margin: auto;
     padding-left: 0;
     padding-right: 0;
-    
 }
 
 .content-wrapper {
@@ -62,7 +63,7 @@ h5 {
 
 #reset-filters {
     display: flex;
-    margin: 10 20px 10px;
+    margin: 10px;
 
 }
 .reset a i,
