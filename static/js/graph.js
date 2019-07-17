@@ -192,8 +192,8 @@ function show_numberOfAppearance(ndx) {
   var maxYear = yearDim.top(1)[0].year;
 
   dc.scatterPlot("#appearance")
-    .width(750)
     .height(450)
+    .width(750)
     .x(d3.scale.linear().domain([minYear,maxYear]))
     .brushOn(false)
     .symbolSize(8)
@@ -234,7 +234,7 @@ function show_alive(ndx) {
     .xUnits(dc.units.ordinal)
     .elasticY(false)
     .xAxisLabel("Alive")
-    .margins({top: 10,right: 20,bottom: 50,left: 90})
+    .margins({top: 10,right: 40,bottom: 50,left: 80})
     .yAxis()
     .ticks(10);
 }

@@ -83,7 +83,10 @@ h5 {
 .chart-content p {
     float: left;
 }
-
+.div-height{
+    display: flex;
+    flex-wrap: wrap;
+}
 /*------Gender icon & Percentage------*/
 
 .gender-percent {
@@ -127,10 +130,7 @@ h5 {
     transform: rotate(-35deg);
 
 }
-.div-height{
-    display: flex;
-    flex-wrap: wrap;
-}
+
 /*--------Pie Chart------*/
 .graph {
     width: 100%;
