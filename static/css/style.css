@@ -1,9 +1,8 @@
 /*------ General Styling ------------*/
 
 html,body{
-     width: auto!important; 
+    width: auto!important; 
     overflow-x: hidden!important
-    
 }
 body {
     height: 100%;
@@ -113,7 +112,6 @@ h5 {
     padding: 10px 3px;
 }
 
-
 .sidebar {
     padding-left: 15px;
     padding-right:10px;
@@ -128,6 +126,10 @@ h5 {
      text-anchor: end !important;
     transform: rotate(-35deg);
 
+}
+.div-height{
+    display: flex;
+    flex-wrap: wrap;
 }
 /*--------Pie Chart------*/
 .graph {

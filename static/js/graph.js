@@ -28,7 +28,6 @@ function makeGraphs(error, charactersData) {
 
 /*----------Helper Functions-----------*/
 
-
 //To remove empty values from grouped data//
 //remove_blanks function is taken from Code Institute student Dave Laffan-superhero-dashboard//
 
@@ -119,21 +118,21 @@ function show_alignment(ndx) {
         p.total++;
         if (v.align === align) {
           p.match++;
-        };
+        }
         return p;
       },
       function (p, v) {
         p.total--;
         if (v.align === align) {
           p.match--;
-        };
+        }
         return p;
       },
       function () {
-        return { total: 0, match: 0 }
+        return { total: 0, match: 0 };
       }
     );
-  };
+  }
    // stacked barchart to show number of characters who are good / bad / neutral
   
   var alignmentColors = d3.scale.ordinal()
@@ -146,7 +145,7 @@ function show_alignment(ndx) {
  
   dc.barChart("#bar-alignment")
     .height(350)
-    .width(600)
+    .width(550)
     .useViewBoxResizing(true) //to make the chart responsive
     .dimension(dim)
     .group(goodByGender, "Good")
@@ -158,15 +157,14 @@ function show_alignment(ndx) {
       } else {
         return 0;
       }
-      return Math.round(d.value.percent * 100)
+      return Math.round(d.value.percent * 100);
     })
     .colors(alignmentColors)
     .x(d3.scale.ordinal())
     .xUnits(dc.units.ordinal)
-    .barPadding(0.2)
     .xAxisLabel("Gender")
     .legend(dc.legend().x(490).y(10).itemHeight(15).gap(10))
-    .margins({top: 10, right: 100, bottom: 100, left: 120});
+    .margins({top: 10, right: 100, bottom: 80, left: 120});
     
    //.renderlet(function(chart) {
   //  chart.selectAll("g.x text").attr('dx', '-30').attr(
@@ -225,19 +223,18 @@ function show_alive(ndx) {
     .range(['#4682B4']);
 
   dc.barChart("#bar-alive")
-    .width(300)
     .height(350)
+    .width(250)
     .useViewBoxResizing(true)
-    .margins({top: 10,right: 20,bottom: 50,left: 110})
     .colors(aliveColors)
     .dimension(dim)
     .group(group)
-    .barPadding(0.05)
     .transitionDuration(1000)
     .x(d3.scale.ordinal())
     .xUnits(dc.units.ordinal)
     .elasticY(false)
     .xAxisLabel("Alive")
+    .margins({top: 10,right: 20,bottom: 50,left: 90})
     .yAxis()
     .ticks(10);
 }
@@ -287,9 +284,8 @@ function show_eyeColor(ndx) {
    .legend(dc.legend().x(430).y(10).itemHeight(12).gap(5));
    
  } 
-
  
-  /*------------------List of characters Table-----------*/
+/*------------------List of characters Table-----------*/
   
   
  function show_listCharacters(ndx) {
