@@ -75,7 +75,7 @@ function show_gender_percent(ndx, listOfValues, element) {
   );
 
   dc.numberDisplay(element)
-    .formatNumber(d3.format('.2%'))
+    .formatNumber(d3.format('.2%')) // format number as percentage
     .valueAccessor(function(d) {
       if (d.sex_count == 0) {
         return 0;
@@ -154,11 +154,16 @@ function show_alignment(ndx) {
     .valueAccessor(function (d) {
       if(d.value.total > 0) {
         return Math.round((d.value.match / d.value.total) * 100);
+          
       } else {
         return 0;
       }
       return Math.round(d.value.percent * 100); 
     })
+    .renderTitle(true)
+    .title(function (d) {
+      return d.key + " " + Math.round((d.value.match / d.value.total) * 100) + '%';
+        })
     .colors(alignmentColors)
     .x(d3.scale.ordinal())
     .xUnits(dc.units.ordinal)
