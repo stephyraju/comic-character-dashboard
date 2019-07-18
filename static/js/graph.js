@@ -90,7 +90,7 @@ function show_gender_percent(ndx, listOfValues, element) {
  /*-----------------Pie Chart Identity ---------------*/
 
 function show_identity(ndx) {
-  var dim = ndx.dimension(dc.pluck("id"));
+  var dim = ndx.dimension(dc.pluck('id'));
   var group = remove_blanks(dim.group(), "");
   
    var pieColors = d3.scale.ordinal()
@@ -138,19 +138,19 @@ function show_alignment(ndx) {
   var alignmentColors = d3.scale.ordinal()
     .range(['#e9ab18', '#4682B4','#0E9E8D']);  
 
-  var dim = ndx.dimension(dc.pluck("sex"));
-  var goodByGender = alignmentByGender(dim, "good characters"); 
-  var badByGender = alignmentByGender(dim, "bad characters");
-  var neutralByGender = alignmentByGender(dim, "neutral characters");
+  var dim = ndx.dimension(dc.pluck('sex'));
+  var goodByGender = alignmentByGender(dim, 'good characters'); 
+  var badByGender = alignmentByGender(dim, 'bad characters');
+  var neutralByGender = alignmentByGender(dim, 'neutral characters');
   
   dc.barChart("#bar-alignment")
     .height(350)
     .width(550)
     .useViewBoxResizing(true) //to make the chart responsive
     .dimension(dim)
-    .group(goodByGender, "Good")
-    .stack(badByGender, "Bad")
-    .stack(neutralByGender, "Neutral")
+    .group(goodByGender, 'Good')
+    .stack(badByGender, 'Bad')
+    .stack(neutralByGender, 'Neutral')
     .valueAccessor(function (d) {
       if(d.value.total > 0) {
         return Math.round((d.value.match / d.value.total) * 100);
@@ -167,7 +167,7 @@ function show_alignment(ndx) {
     .colors(alignmentColors)
     .x(d3.scale.ordinal())
     .xUnits(dc.units.ordinal)
-    .xAxisLabel("Gender")
+    .xAxisLabel('Gender')
     .legend(dc.legend().x(490).y(10).itemHeight(15).gap(10))
     .margins({top: 10, right: 100, bottom: 80, left: 120});
     
@@ -181,8 +181,8 @@ function show_alignment(ndx) {
 
 function show_numberOfAppearance(ndx) {
   var genderColors = d3.scale.ordinal()
-    .domain(["female", "male"])
-    .range(["pink", "blue"]);
+    .domain(['female', 'male'])
+    .range(['pink', 'blue']);
   
   var yearDim = ndx.dimension(function (d) {
     return d.year;
@@ -196,7 +196,7 @@ function show_numberOfAppearance(ndx) {
   var minYear = yearDim.bottom(1)[0].year;
   var maxYear = yearDim.top(1)[0].year;
 
-  dc.scatterPlot("#appearance")
+  dc.scatterPlot('#appearance')
     .height(450)
     .width(750)
     .x(d3.scale.linear().domain([minYear,maxYear]))
@@ -208,7 +208,7 @@ function show_numberOfAppearance(ndx) {
     .elasticY(true)
     .yAxisLabel("Apperarance")
     .title(function (d) {
-      return d.key[3] + d.key[1] + " appearances ";
+      return d.key[3] + d.key[1] + 'appearances';
     })
     .colorAccessor(function (d) {
       return d.key[2];
@@ -221,13 +221,13 @@ function show_numberOfAppearance(ndx) {
  /*------------------Alive Bar chart-----------*/
  
 function show_alive(ndx) {
-  var dim = ndx.dimension(dc.pluck("alive"));
+  var dim = ndx.dimension(dc.pluck('alive'));
   var group = remove_blanks(dim.group(), "");
   
   var aliveColors = d3.scale.ordinal()
     .range(['#4682B4']);
 
-  dc.barChart("#bar-alive")
+  dc.barChart('#bar-alive')
     .height(350)
     .width(250)
     .useViewBoxResizing(true)
@@ -250,10 +250,10 @@ function show_eyeColor(ndx) {
   var pieColors = d3.scale.ordinal()
     .range(['#4682B4','#8C6746','black', '#B1AA4E',	'#FF4500','#ADDFAD','#e9ab18', '#F2BC79', '#B2762D', '#DCAB6E']);
   
-  var dim = ndx.dimension(dc.pluck("eye"));
+  var dim = ndx.dimension(dc.pluck('eye'));
   var group = remove_blanks(dim.group(), "");
   
-  dc.pieChart("#eye-color")
+  dc.pieChart('#eye-color')
    .height(300)
    .width(550)
    .innerRadius(50)
@@ -276,7 +276,7 @@ function show_eyeColor(ndx) {
   var dim = ndx.dimension(dc.pluck("hair"));
   var group = remove_blanks(dim.group(), "");
   
-  dc.pieChart("#hair-color")
+  dc.pieChart('#hair-color')
    .height(300)
    .width(550)
    .innerRadius(50)
@@ -294,16 +294,16 @@ function show_eyeColor(ndx) {
   
   
  function show_listCharacters(ndx) {
-  var dataTable = dc.dataTable("#all-characters");
-  var dim = ndx.dimension(dc.pluck("name"));
+  var dataTable = dc.dataTable('#all-characters');
+  var dim = ndx.dimension(dc.pluck('name'));
   var resultStart = 0;
   var resultEnd = 101;
 
   function updateResult() {
     function displayResult() {
-      document.getElementById("start").innerHTML = resultStart;
-      document.getElementById("end").innerHTML = resultStart + resultEnd-1;
-      document.getElementById("totalSize").innerHTML = ndx.size();
+      document.getElementById('start').innerHTML = resultStart;
+      document.getElementById('end').innerHTML = resultStart + resultEnd-1;
+      document.getElementById('totalSize').innerHTML = ndx.size();
       d3.select('#prev').attr('disabled', resultStart-resultEnd < 0 ? 'true' : null);
       d3.select('#next').attr('disabled', resultStart+resultEnd >= ndx.size() ? 'true' : null);
     }
@@ -319,9 +319,9 @@ function show_eyeColor(ndx) {
     .group(function(d) {
       return "";
     })
-    .columns(["name", "urlslug", "first appearance"])
+    .columns(['name', 'urlslug', 'first appearance'])
     .size(Infinity)
-    .sortBy(dc.pluck("name")) // This line of code is corrected by stackoverflow
+    .sortBy(dc.pluck('name')) // This line of code is corrected by stackoverflow
     .order(d3.ascending)
     .transitionDuration(1000);
 
