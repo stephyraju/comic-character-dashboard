@@ -14,9 +14,9 @@ function makeGraphs(error, charactersData) {
   show_alignment(ndx);
   show_identity(ndx);
   gender_selector(ndx);
-  show_gender_percent(ndx, 'male', '#male-percent');
-  show_gender_percent(ndx, 'female', '#female-percent');
-  show_gender_percent(ndx, 'genderless', '#others-percent');
+  show_gender_percent(ndx, ['male'], '#male-percent');
+  show_gender_percent(ndx, ['female'], '#female-percent');
+  show_gender_percent(ndx, ['genderless','transgender','unknown'], '#others-percent');
   show_numberOfAppearance(ndx);
   show_eyeColor(ndx);
   show_hairColor(ndx);
@@ -52,19 +52,19 @@ function gender_selector(ndx) {
     .group(genderGroup);
 }
 
-function show_gender_percent(ndx, sex, element) {
+function show_gender_percent(ndx, listOfValues, element) {
   var genderPercent = ndx.groupAll().reduce(
     // Sum totals for each gender type
     function(p, v) {
       p.total++;
-      if (v.sex === sex) {
+      if (listOfValues.includes(v.sex)) {
         p.sex_count++;
       }
       return p;
     },
     function(p, v) {
       p.total--;
-      if (v.sex === sex) {
+      if (listOfValues.includes(v.sex)) {
         p.sex_count--;
       }
       return p;
@@ -142,7 +142,7 @@ function show_alignment(ndx) {
   var goodByGender = alignmentByGender(dim, "good characters"); 
   var badByGender = alignmentByGender(dim, "bad characters");
   var neutralByGender = alignmentByGender(dim, "neutral characters");
- 
+  
   dc.barChart("#bar-alignment")
     .height(350)
     .width(550)
@@ -157,7 +157,7 @@ function show_alignment(ndx) {
       } else {
         return 0;
       }
-      return Math.round(d.value.percent * 100);
+      return Math.round(d.value.percent * 100); 
     })
     .colors(alignmentColors)
     .x(d3.scale.ordinal())
