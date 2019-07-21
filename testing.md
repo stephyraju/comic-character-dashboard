@@ -30,7 +30,6 @@ The most complex function has a cyclomatic complexity value of 3 while the media
   * $
 
 
-
 ### Manual Testing
 
 The dashboard was tested throughout development on all the major browsers using the developer tools and also testing on individual devices. 
@@ -55,16 +54,14 @@ using functon 'remove_blanks(group, value_to_remove)'.This function was working 
     
 For checking the functionality of 'remove_blanks' I manually counted few data and also checked by adding a console.log to the script after each chart is drawn.
 This was showing the number of empty data for each chart.
- 
-### Known Bugs    
-
-In the console, "Error: <path> attribute transform: Trailing garbage, "…00.961538461537,NaN) was poping up. Since everything works correctly, I ignored this error.
     
 #### jQuery Tests
 
 jQuery is used in 2 areas of the website. To reset the filters, and in the next and prev buttons in pagination. 
 Both of these have been tested and work 100% and without errors.
     
-    
+### Known Bugs    
+
+In the console, "Error: <path> attribute transform: Trailing garbage, "…00.961538461537,NaN) was poping up. Since everything works correctly, I ignored this error.   
     
 
