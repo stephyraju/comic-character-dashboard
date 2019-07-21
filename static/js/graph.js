@@ -5,18 +5,22 @@ queue()
 function makeGraphs(error, charactersData) {
   var ndx = crossfilter(charactersData);
   
+   // Convert data attributes to integers.
+   
   charactersData.forEach(function(d) {
     d.appearances = parseInt(d.appearances);
     d.first_appearance=parseInt(d.first-appearance);
    
   });
   
+   // Call the functions for each individual graph.
+   
   show_alignment(ndx);
   show_identity(ndx);
   gender_selector(ndx);
   show_gender_percent(ndx, ['male'], '#male-percent');
   show_gender_percent(ndx, ['female'], '#female-percent');
-  show_gender_percent(ndx, ['genderless','transgender','unknown'], '#others-percent');
+  show_gender_percent(ndx, ['genderless','transgender','unknown'], '#others-percent');//grouped three values to one
   show_numberOfAppearance(ndx);
   show_eyeColor(ndx);
   show_hairColor(ndx);
@@ -170,12 +174,7 @@ function show_alignment(ndx) {
     .xAxisLabel('Gender')
     .legend(dc.legend().x(490).y(10).itemHeight(15).gap(10))
     .margins({top: 10, right: 100, bottom: 80, left: 120});
-    
-   //.renderlet(function(chart) {
-  //  chart.selectAll("g.x text").attr('dx', '-30').attr(
-  // 'dy', '-7').attr('transform', "rotate(-60)"); });
 }
-
 
 /*--------------------scatterplot--------------*/
 
@@ -287,11 +286,9 @@ function show_eyeColor(ndx) {
    .group(group)
    .useViewBoxResizing(true)
    .legend(dc.legend().x(430).y(10).itemHeight(12).gap(5));
-   
  } 
  
 /*------------------List of characters Table-----------*/
-  
   
  function show_listCharacters(ndx) {
   var dataTable = dc.dataTable('#all-characters');
@@ -306,14 +303,13 @@ function show_eyeColor(ndx) {
       document.getElementById('totalSize').innerHTML = ndx.size();
       d3.select('#prev').attr('disabled', resultStart-resultEnd < 0 ? 'true' : null);
       d3.select('#next').attr('disabled', resultStart+resultEnd >= ndx.size() ? 'true' : null);
-    }
+   }
   
     dataTable.beginSlice(resultStart);
     dataTable.endSlice(resultStart + resultEnd);
     displayResult();
   }
 
- // console.log(dim.top(Infinity));
   dataTable
     .dimension(dim)
     .group(function(d) {

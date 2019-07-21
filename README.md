@@ -3,7 +3,7 @@
   **Milestone Project 2: Interactive Frontend Development**
  
  
-  The single page datadashbord illustrates the original data from 'FiveThirtyEight Comic Characters Dataset' in a way that users can easily understand and analyse the content.
+  The single page datadashbord illustrates the original data from ['FiveThirtyEight Comic Characters Dataset'] (https://fivethirtyeight.com/features/women-in-comic-books/)in a way that users can easily understand and analyse the content.
   
   The page uses Javascript libraries D3.js, Dc.js and crossfilter.js in order to present interconnected and dynamic graphs. 
   
