@@ -5,16 +5,30 @@
 [View Comic Character Dashbord here!](https://stephyraju.github.io/comic-character-dashboard/)
 
 
-
 ### Automated Testing
 
 ##### Validation Services
 
  Validation services were used to ensure the the validity of the website code.
 
-- [W3C Markup Validation Service](https://validator.w3.org/)
-- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
-- [JSHint](https://jshint.com/)
+- [W3C Markup Validation Service](https://validator.w3.org/): No errors or warnings found.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/): No errors or warnings found.
+- [JSHint](https://jshint.com/): Metrics from my graph.js file:There are 33 functions in this file.
+
+Function with the largest signature take 3 arguments, while the median is 1.
+
+Largest function has 14 statements in it, while the median is 3.
+
+The most complex function has a cyclomatic complexity value of 3 while the median is 1.
+
+Six undefined variables
+12	queue
+13	d3
+17	crossfilter
+23	appearance
+41	dc
+343	$
+
 
 
 ### Manual Testing
@@ -41,7 +55,10 @@ using functon 'remove_blanks(group, value_to_remove)'.This function was working 
     
 For checking the functionality of 'remove_blanks' I manually counted few data and also checked by adding a console.log to the script after each chart is drawn.
 This was showing the number of empty data for each chart.
-    
+ 
+### Known Bugs    
+
+In the console, "Error: <path> attribute transform: Trailing garbage, "…00.961538461537,NaN) was poping up. Since everything works correctly, I ignored this error.
     
 #### jQuery Tests
 
