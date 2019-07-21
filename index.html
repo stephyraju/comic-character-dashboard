@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description"
-        content="Dashboard with comic characters, featuring graphs made using D3, DC.js, and crossfilter.js">
+    <meta name="description" content="Dashboard with comic characters, featuring graphs made using D3, DC.js, and crossfilter.js">
     <title>Comic Characters Dashboard</title>
 
     <!-- CSS Libraries-->
@@ -44,9 +43,9 @@
                     <p>Welcome to the Comic Character Dashboard!</p>
                     <p>This dashboard features interactive charts to display data behind the story<a href="https://fivethirtyeight.com/features/women-in-comic-books/" target="_blank" class="inline-link" title=" Comic Books Are Still Made By Men, For Men And About Men"> Comic Books Are Still Made By Men, For Men And About Men</a>.
                         All charts are interactive and can get the results filtered when you click on the chart except scatterplot.</p>
-                    <p>The graphs render better on desktop and tablet, if you are on mobile, consider switching!</p> 
-                    <p>All graphs on the entire dashboard are connected. To reset them to default, click the redo icon on the top right side and you can
-                    reset in bar and piecharts in there itself by clicking on a reset button which appears when you click on those graphs</p>
+                    <p>The graphs render better on desktop and tablet, if you are on mobile, consider switching!</p>
+                    <p>All graphs on the entire dashboard are connected. To reset them to default, click the redo icon on the top right side and you can reset in bar and piecharts in there itself by clicking on a reset button which appears when you click
+                        on those graphs</p>
                     <p>All the original data is from<a href="https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset" target="_blank" class="inline-link" title="Kaggle.com"> Kaggle</a></p>
                     <p>This information can access again when you click on the information icon on the top rightside.</p>
                 </div>
@@ -55,7 +54,6 @@
                     <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 
                 </div>
-                
             </div>
         </div>
     </div>
@@ -87,7 +85,7 @@
 
                 <!-- Gender Icons -->
 
-                <div class="col-xs-12 col-md-5 sidebar container-fluid">
+                <div class="col-xs-12 col-md-5 gender-bar container-fluid">
                     <div class="content-wrapper">
 
                         <div class="row gender-percent">
@@ -134,12 +132,11 @@
                                 <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
                             </div>
 
-                            <p>When comparing the alignment with gender,female characters have the most numer of good alignment.</p>
-                            <p>There is just one transgender character, which is in bad alignment either.</p>
+                            <p>When comparing the alignment with gender, female characters have the most numer of good alignment.</p>
+                            <p>There is just one transgender character, which is in bad alignment.</p>
 
                         </div>
                     </div>
-
                 </div>
 
             </div>
@@ -149,9 +146,9 @@
 
         <section id="apperance-alive" class="container-fluid">
             <div class="row div-height">
-                
+
                 <!-- Scatterplot -->
-                
+
                 <div class="col-xs-12 col-md-8 scatterplot-appearance">
                     <div class="content-wrapper">
                         <header class="chart-header">
@@ -159,7 +156,7 @@
                         </header>
                         <div class="chart-content">
                             <div id="appearance"></div>
-                            <p>The chart displays the name, number of apperances of the character in comic book and also the year of the first appearance in a comic book.</p>
+                            <p>The chart displays the name, number of apperances of the character and also the year of the first appearance in a comic book.</p>
                         </div>
                     </div>
                 </div>
@@ -176,7 +173,7 @@
                                 <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
                             </div>
                             <p>A little over 75% of the characters are living as per the current data.</p>
-                            <p>67.52%  male and 30.27% female charcters are living! </p>
+                            <p>67.52% male and 30.27% female charcters are living! </p>
                         </div>
                     </div>
                 </div>
@@ -232,9 +229,9 @@
                     <table id="all-characters"> </table>
                 </div>
             </div>
-            
+
             <!-- Pagination -->
-            
+
             <div id="pagination">
                 <span id="start"></span>-<span id="end"></span> of <span id="totalSize"></span>
                 <button id="prev" class="btn btn-primary">Prev</button>
@@ -243,7 +240,7 @@
         </section>
     </main>
 
-       <!-- Footer -->
+    <!-- Footer -->
 
     <footer>
         <div class="container-fluid">

@@ -7,7 +7,7 @@
   
   The page uses Javascript libraries D3.js, DC.js and crossfilter.js in order to present interconnected and dynamic graphs. 
   
-  The site contains barcharts, piecharts ,scatterplot and a table which has all the list of characters.All the charts are connected
+  The site contains barcharts, piecharts, scatterplot and a table which has all the list of characters. All the charts are connected
   and presented in a way that the users can easily analyse the data and get the required information.
   
   The current deployed version can be accessed at: [https://stephyraju.github.io/comic-character-dashboard/](https://stephyraju.github.io/comic-character-dashboard/)
@@ -77,7 +77,7 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during pla
 
 1. Information Modal
     
-   * The modal pops up when open the page, which has brief information about the dashboard.The user can close it either 
+   * The modal pops up when open the page, which has brief information about the dashboard. The user can close it either 
 using the button at the bottom or the 'x' mark on the top right.
    * The user can open the information modal by clicking the information icon on the navbar too.
 2. Reset 
@@ -213,9 +213,9 @@ To make the data easier to work with, the .csv file from kaggle.com was converte
 
 ##### Code
 
-- Code for the pagination was sourced from [Steemit](https://steemit.com/utopian-io/@faad/tutorial-13-dive-into-dc-js-a-javascript-library-data-table-pagination).
-- I was helped out from stackoverflow for using a 'sortBy' function properly in datatable.
-- I used [tutorialspoint](https://www.tutorialspoint.com/dcjs/index.htm) to learn more about dc charts.
+  - Code for the pagination was sourced from [Steemit](https://steemit.com/utopian-io/@faad/tutorial-13-dive-into-dc-js-a-javascript-library-data-table-pagination).
+  - I was helped out from stackoverflow for using a 'sortBy' function properly in datatable.
+  - I used [tutorialspoint](https://www.tutorialspoint.com/dcjs/index.htm) to learn more about dc charts.
  
 
 The code learned from the tutorials were used as help and guidance to be interpreted in a different and unique way.
@@ -223,7 +223,6 @@ The code learned from the tutorials were used as help and guidance to be interpr
 ##### Acknowledgements
 
 A huge thanks to Code Institute Mentor Guido Cecilio for his time and support in explaining, demonstrating and giving constructive feedback for this project.
-
 
 ######  Disclaimer
 
