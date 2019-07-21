@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description"
+        content="Dashboard with comic characters, featuring graphs made using D3, DC.js, and crossfilter.js">
     <title>Comic Characters Dashboard</title>
 
     <!-- CSS Libraries-->
@@ -25,8 +27,6 @@
 
     <!-- JS Codes -->
     <script src="static/js/graph.js"></script>
-
-
 </head>
 
 <body>
@@ -46,7 +46,7 @@
                         All charts are interactive and can get the results filtered when you click on the chart except scatterplot.</p>
                     <p>The graphs render better on desktop and tablet, if you are on mobile, consider switching!</p> 
                     <p>All graphs on the entire dashboard are connected. To reset them to default, click the redo icon on the top right side and you can
-                    reset in bar and piecharts in there itself by clicking on a reset button which appears when you click those graphs</p>
+                    reset in bar and piecharts in there itself by clicking on a reset button which appears when you click on those graphs</p>
                     <p>All the original data is from<a href="https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset" target="_blank" class="inline-link" title="Kaggle.com"> Kaggle</a></p>
                     <p>This information can access again when you click on the information icon on the top rightside.</p>
                 </div>
@@ -116,12 +116,12 @@
                             <div id="identity" class="graph">
                                 <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
                             </div>
-                            <p>Most of the characters have either secret or public identity,and there is a marginal difference between them.</p>
+                            <p>Most of the characters have either secret or public identity, and there is a marginal difference between them.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Barchart Align -->
+                <!-- Barchart Alignment -->
 
                 <div class="col-xs-12 col-md-7 alignment">
                     <div class="content-wrapper">
@@ -135,7 +135,7 @@
                             </div>
 
                             <p>When comparing the alignment with gender,female characters have the most numer of good alignment.</p>
-                            <p>There is just one genderless character and which is in bad alignment either.</p>
+                            <p>There is just one transgender character, which is in bad alignment either.</p>
 
                         </div>
                     </div>
@@ -145,11 +145,13 @@
             </div>
         </section>
 
-        <!-- Scatterplot-Appearance -->
+        <!-- Scatterplot-Appearance and alive barchart -->
 
         <section id="apperance-alive" class="container-fluid">
             <div class="row div-height">
-
+                
+                <!-- Scatterplot -->
+                
                 <div class="col-xs-12 col-md-8 scatterplot-appearance">
                     <div class="content-wrapper">
                         <header class="chart-header">
@@ -157,7 +159,7 @@
                         </header>
                         <div class="chart-content">
                             <div id="appearance"></div>
-                            <p>The chart displays the number of apperances of the character in comic book and also the year of the first appearance in a comic book.</p>
+                            <p>The chart displays the name, number of apperances of the character in comic book and also the year of the first appearance in a comic book.</p>
                         </div>
                     </div>
                 </div>
@@ -169,7 +171,7 @@
                         <header class="chart-header">
                             <h3> Alive</h3>
                         </header>
-                        <div class="chart-content">
+                        <div class="chart-content alive-content">
                             <div id="bar-alive" class="graph">
                                 <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
                             </div>
@@ -178,8 +180,6 @@
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </section>
 
@@ -216,22 +216,25 @@
                             <div id="hair-color" class="graph">
                                 <a class="reset" style="display: none" href="javascript: dc.filterAll(); dc.redrawAll();"><span style = "color:#4682B4; float:left;">Reset</span></a>
                             </div>
-                            <p>With hair color section the most charcters chose black,brown or red hair but there are few more colors too. Over 75% blond hair characters have blue eyes!</p>
+                            <p>With hair color section the most charcters chose black,brown or blond hair but there are few more colors too. Over 75% blond hair characters have blue eyes!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Table -->
+        <!-- Table-List of Characters -->
 
         <section id="character-list" class="container-fluid">
             <div class="col-xs-12" id="all-characters-div">
                 <div class="content-wrapper">
-                    <h2>Comic Characters</h2>
+                    <h2>List Of Comic Characters</h2>
                     <table id="all-characters"> </table>
                 </div>
             </div>
+            
+            <!-- Pagination -->
+            
             <div id="pagination">
                 <span id="start"></span>-<span id="end"></span> of <span id="totalSize"></span>
                 <button id="prev" class="btn btn-primary">Prev</button>
@@ -255,18 +258,10 @@
         </div>
     </footer>
 
-
-
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
     <script src="static/js/script.js"></script>
-
-
 
 </body>
 

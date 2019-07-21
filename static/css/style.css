@@ -39,8 +39,6 @@ h5 {
 .modal-backdrop {
     background-color: transparent;
 }
-
-
 /*--------- Header --------*/
 
 .nav-bar {
@@ -63,8 +61,8 @@ h5 {
 #reset-filters {
     display: flex;
     margin: 10px;
-
 }
+
 .reset a i,
 .info-icon a i {
     font-size: 1.7em;
@@ -78,12 +76,11 @@ h5 {
 .chart-content {
     font-size: .8em;
     padding: 10px 5% 0px 6%;
-    
 }
 .chart-content p {
     float: left;
 }
-.div-height{
+.div-height {
     display: flex;
     flex-wrap: wrap;
 }
@@ -115,7 +112,7 @@ h5 {
     padding: 10px 3px;
 }
 
-.sidebar {
+.gender-bar{
     padding-left: 15px;
     padding-right:10px;
 }
@@ -128,7 +125,6 @@ h5 {
 #bar-alive .x.axis text {
      text-anchor: end !important;
     transform: rotate(-35deg);
-
 }
 
 /*--------Pie Chart------*/
@@ -150,7 +146,7 @@ th {
 #all-characters-div {
     width: 100%;
     text-align: center;
-    padding: 0 0 5px 0;
+    padding-bottom: 5px;
 }
 
 #all-characters {
@@ -193,10 +189,17 @@ th {
   
 }
 @media (min-width: 768px){
+    
      h5 {
     font-size: 1em;
     font-weight: bold;
 }
+}
+@media (min-width: 768px) and (max-width: 991.98px){
+    
+   .alive-content p{
+       float: none;
+   }
 }
 @media (max-width: 575.98px){
     
