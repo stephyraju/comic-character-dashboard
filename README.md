@@ -5,9 +5,10 @@
  
   The single page datadashbord illustrates the original data from ['FiveThirtyEight Comic Characters Dataset'](https://fivethirtyeight.com/features/women-in-comic-books/) in a way that users can easily understand and analyse the content.
   
-  The page uses Javascript libraries D3.js, Dc.js and crossfilter.js in order to present interconnected and dynamic graphs. 
+  The page uses Javascript libraries D3.js, DC.js and crossfilter.js in order to present interconnected and dynamic graphs. 
   
-  The site contains barcharts, piecharts ,scatterplot and a table which has all the list of characters.
+  The site contains barcharts, piecharts ,scatterplot and a table which has all the list of characters.All the charts are connected
+  and presented in a way that the users can easily analyse the data and get the required information.
   
   The current deployed version can be accessed at: [https://stephyraju.github.io/comic-character-dashboard/](https://stephyraju.github.io/comic-character-dashboard/)
 
@@ -80,7 +81,8 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during pla
 using the button at the bottom or the 'x' mark on the top right.
    * The user can open the information modal by clicking the information icon on the navbar too.
 2. Reset 
-   *  There is one reset (redo icon)on the right side of navbar which can reset all the charts.
+
+   *  There is one reset (redo icon) on the right side of navbar which can reset all the charts.
    *  Moreover Reset option is given for some charts too, when chart is clicked, the reset link will appear which allows user to reset the filters from the selected chart and also other charts.
   
 3. Navbar 
@@ -107,13 +109,13 @@ to make a deeper understanding about characters.
   
 7. Scatter plot
   
-   * Scatterplot shows the characters year of first appearance and the number of appearance in comic books.
+   * Scatterplot shows the name of the character, year of first appearance and the number of appearance in comic books.
 
 8. Table 
   
-   * The table has all the comic caharacters name,urslug and the first appearance.
+   * The table has all the comic caharacters name,url slug and the first appearance.
    * Table has pagination and displays 100 rows in one page and has Next and Prev button which will help to 
-    go forward and backword.
+    go forward and backward.
 
 9. Footer
    
@@ -126,6 +128,9 @@ to make a deeper understanding about characters.
 * Additional page with character information
 
   I would like to add an additional page with detailed information on the characters in future.
+* Link to website 
+
+  I would like to link the url in the table to the respective webpages.
 
 
 ### Technologies Used
@@ -159,7 +164,7 @@ The project uses Popper,js reference Javascript needed for the responsive navbar
  
   - [jQuery](https://jquery.com/) (version 3.4.1)
 
-       The project uses jQuery to simplify traversing the DOM and displaying different parts of the data and the Modal.
+       The project uses jQuery to assist with DOM manipulation when resetting filters and to display the Modal.
         
   - [D3-queue.js](https://github.com/d3/d3-queue) 
 
@@ -167,7 +172,7 @@ The project uses Popper,js reference Javascript needed for the responsive navbar
                
 * [Font Awesome](https://www.bootstrapcdn.com/fontawesome/)
 
-    Font Awesome was used for number display icons, info icon and redo icon.     
+    Font Awesome was used for number display icons, info icon, redo icon and back to top icon.     
     
 * [Balsamiq](https://balsamiq.com/)
 
@@ -191,8 +196,8 @@ The site was developed using the [cloud9 IDE](https://aws.amazon.com/cloud9/?ori
    * From repositories I selected **Comic Character Dashboard**.
    * Then I selected **settings** from the menubar.
    * Scroll down to the page, on the  **Source** click the drop-down menu and select **Master Branch**.
-   * The Comic Character Dashbord is now diployed and can found here :[ https://stephyraju.github.io/comic-character-dashboard/.](https://stephyraju.github.io/comic-character-dashboard/.)
    * The page is automatically refreshed and ready for deployment, it can take up to 5 minutes for it to be viewable.
+   * The Comic Character Dashbord is now diployed and can found here :[ https://stephyraju.github.io/comic-character-dashboard/.](https://stephyraju.github.io/comic-character-dashboard/.)
 
 
 ### Credits
@@ -202,7 +207,7 @@ All the text contents in the website is written by the developer.
 
 ##### Source
 
-The original data is soursed from [kaggle](https://www.kaggle.com/explore-projects), and here is the link:[https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset](https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset).
+The original data is sourced from [kaggle](https://www.kaggle.com/explore-projects), and here is the link:[https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset](https://www.kaggle.com/fivethirtyeight/fivethirtyeight-comic-characters-dataset).
 
 To make the data easier to work with, the .csv file from kaggle.com was converted to a json file.
 
