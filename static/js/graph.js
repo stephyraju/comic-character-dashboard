@@ -9,15 +9,14 @@ function makeGraphs(error, charactersData) {
    
   charactersData.forEach(function(d) {
     d.appearances = parseInt(d.appearances);
-    d.first_appearance=parseInt(d.first-appearance);
-   
+    d.first_appearance = parseInt(d.first-appearance);
   });
   
    // Call the functions for each individual graph.
-   
+  
+  gender_selector(ndx);
   show_alignment(ndx);
   show_identity(ndx);
-  gender_selector(ndx);
   show_gender_percent(ndx, ['male'], '#male-percent');
   show_gender_percent(ndx, ['female'], '#female-percent');
   show_gender_percent(ndx, ['genderless','transgender','unknown'], '#others-percent');//grouped three values to one
