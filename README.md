@@ -142,16 +142,16 @@ using the button at the bottom or the 'x' mark on the top right.
   
   * [BootstrapCDN](https://www.bootstrapcdn.com/)
 
-        The project uses Bootstrap4 to simplify the structure of the website and make the website responsive easily.
-        The project also uses BootstrapCDN to provide icons from FontAwesome.
+    The project uses Bootstrap4 to simplify the structure of the website and make the website responsive easily.
+    The project also uses BootstrapCDN to provide icons from FontAwesome.
 
  * [Bootswatch](https://bootswatch.com/3/)
 
-        Bootswatch 3.4.1 (Sandstone theme for bootstrap 3) was used to build responsive grid structure for the site and for CSS styling.
+    Bootswatch 3.4.1 (Sandstone theme for bootstrap 3) was used to build responsive grid structure for the site and for CSS styling.
 
  * [Popper.js](https://popper.js.org/)
 
-        The project uses Popper,js reference Javascript needed for the responsive navbar.
+    The project uses Popper,js reference Javascript needed for the responsive navbar.
 
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
@@ -164,23 +164,23 @@ using the button at the bottom or the 'x' mark on the top right.
  
   - [jQuery](https://jquery.com/) (version 3.4.1)
 
-       The project uses jQuery to assist with DOM manipulation when resetting filters and to display the Modal.
+    The project uses jQuery to assist with DOM manipulation when resetting filters and to display the Modal.
         
   - [D3-queue.js](https://github.com/d3/d3-queue) 
 
-        This will load the json data fully before running other files.
+    This will load the json data fully before running other files.
                
 * [Font Awesome](https://www.bootstrapcdn.com/fontawesome/)
 
-        Font Awesome was used for number display icons, info icon, redo icon and back to top icon.     
+    Font Awesome was used for number display icons, info icon, redo icon and back to top icon.     
     
 * [Balsamiq](https://balsamiq.com/)
 
-        Balsamiq was used for creating the wireframes.
+    Balsamiq was used for creating the wireframes.
    
 * [Git $ GitHub](https://github.com/)
 
-        Git used for the Version control and GitHub used as hosting service for Git Repositories of this site.
+    Git used for the Version control and GitHub used as hosting service for Git Repositories of this site.
  
 ### Testing
 
