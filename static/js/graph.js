@@ -9,6 +9,9 @@ function makeGraphs(error, charactersData) {
    
   charactersData.forEach(function(d) {
     d.appearances = parseInt(d.appearances);
+    if (isNaN(d.appearances)) {
+      d.appearances = 0;
+    }
   });
   
    // Call the functions for each individual graph.
