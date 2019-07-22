@@ -9,7 +9,8 @@
 
 ##### Validation Services
 
- Validation services were used to ensure the the validity of the website code.
+    
+Validation services were used to ensure the the validity of the website code.
 
 - [W3C Markup Validation Service](https://validator.w3.org/): No errors or warnings found.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/): No errors or warnings found.

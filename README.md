@@ -80,32 +80,32 @@ These wireframes were created using [Balsamiq](https://balsamiq.com/) during pla
    * The modal pops up when open the page, which has brief information about the dashboard. The user can close it either 
 using the button at the bottom or the 'x' mark on the top right.
    * The user can open the information modal by clicking the information icon on the navbar too.
-2. Reset 
+2. Reset  
 
    *  There is one reset (redo icon) on the right side of navbar which can reset all the charts.
    *  Moreover Reset option is given for some charts too, when chart is clicked, the reset link will appear which allows user to reset the filters from the selected chart and also other charts.
   
 3. Navbar 
    
-    * The navbar is fixed on the top.
-    * The navbar contains the title of the site, a reset icon that when clicked, resets all the filters back to their default values and also an information icon that opens the modal if clicked on that.
+   * The navbar is fixed on the top.
+   * The navbar contains the title of the site, a reset icon that when clicked, resets all the filters back to their default values and also an information icon that opens the modal if clicked on that.
     
 4. Gender Icon
    
-    * The gender icons are displayed with the percentage of characters in each gender and the number changes as the user filter the charts.
+   * The gender icons are displayed with the percentage of characters in each gender and the number changes as the user filter the charts.
     
 5. Pie charts
     
-    * There is one piechart and two doughnut charts which displays different data.
+   * There is one piechart and two doughnut charts which displays different data.
      The Piechart shows the identity whereas the donughts shows Eye color and Hair color.
      The user can filter the data by clicking on each slices.
 
 6. Bar charts
     
-    * The stacked bar graph explains the the genderbased alignment.Like other chart user can filter the data 
-to make a deeper understanding about characters.
+   * The stacked bar graph explains the the genderbased alignment.Like other chart user can filter the data 
+     to make a deeper understanding about characters.
    
-    * The bar graph displays the live status of characters.The user can filter data here as well. 
+   * The bar graph displays the live status of characters.The user can filter data here as well. 
   
 7. Scatter plot
   
@@ -115,7 +115,7 @@ to make a deeper understanding about characters.
   
    * The table has all the comic caharacters name,url slug and the first appearance.
    * Table has pagination and displays 100 rows in one page and has Next and Prev button which will help to 
-    go forward and backward.
+     go forward and backward.
 
 9. Footer
    
@@ -125,12 +125,13 @@ to make a deeper understanding about characters.
 
 #### Features Left to Implement
 
-* Additional page with character information
+   * Additional page with character information
 
-  I would like to add an additional page with detailed information on the characters in future.
-* Link to website 
+      I would like to add an additional page with detailed information on the characters in future.
+   
+   * Link to website 
 
-  I would like to link the url in the table to the respective webpages.
+      I would like to link the url in the table to the respective webpages.
 
 
 ### Technologies Used
@@ -141,17 +142,16 @@ to make a deeper understanding about characters.
   
   * [BootstrapCDN](https://www.bootstrapcdn.com/)
 
-The project uses Bootstrap4 to simplify the structure of the website and make the website responsive easily.
-
-The project also uses BootstrapCDN to provide icons from FontAwesome.
+        The project uses Bootstrap4 to simplify the structure of the website and make the website responsive easily.
+        The project also uses BootstrapCDN to provide icons from FontAwesome.
 
  * [Bootswatch](https://bootswatch.com/3/)
 
-Bootswatch 3.4.1 (Sandstone theme for bootstrap 3) was used to build responsive grid structure for the site and for CSS styling.
+        Bootswatch 3.4.1 (Sandstone theme for bootstrap 3) was used to build responsive grid structure for the site and for CSS styling.
 
  * [Popper.js](https://popper.js.org/)
 
-The project uses Popper,js reference Javascript needed for the responsive navbar.
+        The project uses Popper,js reference Javascript needed for the responsive navbar.
 
 * [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
@@ -168,19 +168,19 @@ The project uses Popper,js reference Javascript needed for the responsive navbar
         
   - [D3-queue.js](https://github.com/d3/d3-queue) 
 
-    This will load the json data fully before running other files.
+        This will load the json data fully before running other files.
                
 * [Font Awesome](https://www.bootstrapcdn.com/fontawesome/)
 
-    Font Awesome was used for number display icons, info icon, redo icon and back to top icon.     
+        Font Awesome was used for number display icons, info icon, redo icon and back to top icon.     
     
 * [Balsamiq](https://balsamiq.com/)
 
-   Balsamiq was used for creating the wireframes.
+        Balsamiq was used for creating the wireframes.
    
 * [Git $ GitHub](https://github.com/)
 
-   Git used for the Version control and GitHub used as hosting service for Git Repositories of this site.
+        Git used for the Version control and GitHub used as hosting service for Git Repositories of this site.
  
 ### Testing
 

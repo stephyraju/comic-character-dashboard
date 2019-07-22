@@ -19,8 +19,8 @@ body {
 
 .content-wrapper {
     width: 100%;
-    overflow: hidden;
     height: 100%;
+    overflow: hidden;
     padding: 15px;
     border-radius: 15px;
     background-color: #fefbf5;
