@@ -21,11 +21,10 @@ Largest function has 14 statements in it, while the median is 3.
 
 The most complex function has a cyclomatic complexity value of 3 while the median is 1.
 
-6 undefined variables:
+5 undefined variables:
   * queue
   * d3
   * crossfilter
-  * appearances
   * dc
   * $
 

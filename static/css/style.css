@@ -51,7 +51,8 @@ h5 {
 }
 
 .title,
-.title:hover{
+.title:hover,
+.title:focus {
     color: black;
     text-decoration: none;
     font-size: 2em;
@@ -197,7 +198,7 @@ th {
 }
 @media (min-width: 768px) and (max-width: 991.98px){
     
-   .alive-content p{
+   .text-content p{
        float: none;
    }
 }

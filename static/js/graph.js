@@ -9,7 +9,6 @@ function makeGraphs(error, charactersData) {
    
   charactersData.forEach(function(d) {
     d.appearances = parseInt(d.appearances);
-    d.first_appearance = parseInt(d.first-appearance);
   });
   
    // Call the functions for each individual graph.
@@ -206,7 +205,7 @@ function show_numberOfAppearance(ndx) {
     .elasticY(true)
     .yAxisLabel("Apperarance")
     .title(function (d) {
-      return d.key[3] + d.key[1] + 'appearances';
+      return d.key[3] + ":" + d.key[1] + " " + 'appearances';
     })
     .colorAccessor(function (d) {
       return d.key[2];
